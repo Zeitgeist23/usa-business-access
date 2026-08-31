@@ -1,0 +1,36 @@
+name: Verify live USA Business Access Vercel deployment
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/verify-live-vercel.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Poll deployment
+        run: |
+          : > LIVE-VERCEL-STATUS.txt
+          url='https://usa-business-access-live-ctmm63stz-zeitgeist24.vercel.app/'
+          for attempt in $(seq 1 12); do
+            rm -f /tmp/body
+            code=$(curl -L -sS --connect-timeout 8 --max-time 25 -o /tmp/body -w '%{http_code}' "$url" 2>/dev/null || true)
+            title=$(grep -oi '<title>[^<]*' /tmp/body 2>/dev/null | head -1 | sed 's/<title>//I' || true)
+            bytes=$(wc -c </tmp/body 2>/dev/null || echo 0)
+            echo "attempt=$attempt UTC=$(date -u +'%Y-%m-%dT%H:%M:%SZ') HTTP=$code bytes=$bytes title=$title" >> LIVE-VERCEL-STATUS.txt
+            if [ "$code" = '200' ] && [ "$title" != 'Login – Vercel' ] && [ "$title" != 'Login - Vercel' ]; then break; fi
+            sleep 10
+          done
+          cat LIVE-VERCEL-STATUS.txt
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LIVE-VERCEL-STATUS.txt
+          git commit -m "Record live Vercel verification" || exit 0
+          git push origin HEAD:main
