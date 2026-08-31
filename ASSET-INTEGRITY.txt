@@ -1,0 +1,13 @@
+USA Business Access approved source-asset integrity manifest
+Generated 2026-08-31
+
+The deployment copies must match the original uploaded files byte-for-byte.
+
+APPROVED DEPLOYMENT ASSETS
+f2315420790c5f8f80da6caa74892f0eb8386ecc38d7b7d39dc1ce89e20db371  assets/usa-business-access-hero-approved.png
+07a6ebafa58ef27f31c2750f6c33eb9491c1f7ea31ccecea670be4a050a7d0b9  assets/usa-business-access-landing-approved.png
+028dfc6376a7ab9fade35b972ba083b1944f4eac011ae50a47e7cedee06bd728  assets/usa-business-access-official-logo.png
+
+BYTE-FOR-BYTE SOURCE VERIFICATION: PASS
+RENDERED HERO PIXEL DIFFERENCE: 0 pixels
+NO GENERATIVE IMAGING USED
