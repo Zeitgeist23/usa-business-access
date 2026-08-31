@@ -1,0 +1,3 @@
+Production deployment trigger after connecting Vercel to GitHub.
+UTC date: 2026-08-31
+Purpose: deploy the sharp lower-page HTML/CSS implementation from main.
