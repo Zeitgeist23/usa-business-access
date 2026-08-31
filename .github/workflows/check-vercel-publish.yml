@@ -1,0 +1,70 @@
+name: Check USA Business Access Vercel publication
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/check-vercel-publish.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-publication:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Poll Vercel and custom domains
+        shell: bash
+        run: |
+          set -u
+          hosts=(
+            "usa-business-access-8b9ms1kx6-zeitgeist24.vercel.app"
+            "usa-business-access-zeitgeist24.vercel.app"
+            "usabusinessaccess-f5modbccs-zeitgeist24.vercel.app"
+            "usabusinessaccess-com-zeitgeist24.vercel.app"
+            "www.usabusinessaccess.com"
+            "usabusinessaccess.com"
+          )
+
+          : > VERCEL-PUBLISH-STATUS.txt
+          echo "USA Business Access publication check" >> VERCEL-PUBLISH-STATUS.txt
+          echo "UTC started: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> VERCEL-PUBLISH-STATUS.txt
+          echo >> VERCEL-PUBLISH-STATUS.txt
+
+          for attempt in $(seq 1 24); do
+            echo "Attempt $attempt at $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> VERCEL-PUBLISH-STATUS.txt
+            any_vercel_200=0
+            for host in "${hosts[@]}"; do
+              ips=$(getent ahostsv4 "$host" 2>/dev/null | awk '{print $1}' | sort -u | paste -sd, -)
+              [ -n "$ips" ] || ips="UNRESOLVED"
+              code=$(curl -L -sS --connect-timeout 8 --max-time 20 -o /tmp/uba-body -w '%{http_code}' "https://$host/" 2>/dev/null || true)
+              [ -n "$code" ] || code="000"
+              bytes=$(wc -c </tmp/uba-body 2>/dev/null || echo 0)
+              title=$(grep -oi '<title>[^<]*' /tmp/uba-body 2>/dev/null | head -1 | sed 's/<title>//I' || true)
+              echo "$host | DNS=$ips | HTTP=$code | bytes=$bytes | title=$title" >> VERCEL-PUBLISH-STATUS.txt
+              if [[ "$host" == *.vercel.app && "$code" == "200" ]]; then
+                any_vercel_200=1
+              fi
+            done
+            echo >> VERCEL-PUBLISH-STATUS.txt
+            if [ "$any_vercel_200" -eq 1 ]; then
+              break
+            fi
+            sleep 10
+          done
+
+          echo "UTC finished: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> VERCEL-PUBLISH-STATUS.txt
+          cat VERCEL-PUBLISH-STATUS.txt
+
+      - name: Commit publication status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add VERCEL-PUBLISH-STATUS.txt
+          git commit -m "Record USA Business Access publication status" || exit 0
+          git push origin HEAD:main
