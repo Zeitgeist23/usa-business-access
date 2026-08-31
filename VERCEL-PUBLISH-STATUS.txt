@@ -1,0 +1,12 @@
+USA Business Access publication check
+UTC started: 2026-08-31T21:28:35Z
+
+Attempt 1 at 2026-08-31T21:28:35Z
+usa-business-access-8b9ms1kx6-zeitgeist24.vercel.app | DNS=216.198.79.131,64.29.17.131 | HTTP=200 | bytes=340907 | title=Login – Vercel
+usa-business-access-zeitgeist24.vercel.app | DNS=216.198.79.131,64.29.17.131 | HTTP=200 | bytes=340857 | title=Login – Vercel
+usabusinessaccess-f5modbccs-zeitgeist24.vercel.app | DNS=216.198.79.3,64.29.17.3 | HTTP=200 | bytes=340893 | title=Login – Vercel
+usabusinessaccess-com-zeitgeist24.vercel.app | DNS=216.198.79.67,64.29.17.67 | HTTP=200 | bytes=340867 | title=Login – Vercel
+www.usabusinessaccess.com | DNS=15.197.148.33,3.33.130.190 | HTTP=000 | bytes=340867 | title=Login – Vercel
+usabusinessaccess.com | DNS=15.197.148.33,3.33.130.190 | HTTP=200 | bytes=114 | title=
+
+UTC finished: 2026-08-31T21:28:38Z
