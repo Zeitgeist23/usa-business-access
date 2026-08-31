@@ -1,0 +1,43 @@
+name: Check USA Business Access domain DNS
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/check-domain-dns.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query DNS and RDAP
+        run: |
+          {
+            echo "USA Business Access domain status"
+            echo "UTC: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo
+            for type in NS SOA A AAAA MX TXT CNAME; do
+              echo "## usabusinessaccess.com $type"
+              dig +noall +answer usabusinessaccess.com "$type" || true
+              echo
+            done
+            for type in A AAAA CNAME; do
+              echo "## www.usabusinessaccess.com $type"
+              dig +noall +answer www.usabusinessaccess.com "$type" || true
+              echo
+            done
+            echo "## RDAP registrar and nameservers"
+            curl -fsSL https://rdap.verisign.com/com/v1/domain/usabusinessaccess.com | python3 -c 'import json,sys; d=json.load(sys.stdin); print("ldhName:",d.get("ldhName")); print("status:",", ".join(d.get("status",[]))); print("nameservers:",", ".join(x.get("ldhName","") for x in d.get("nameservers",[]))); print("entities:"); [print(" -", e.get("roles"), next((v[3] for v in e.get("vcardArray",[None,[]])[1] if v[0]=="fn"), e.get("handle"))) for e in d.get("entities",[])]'
+          } > DOMAIN-DNS-STATUS.txt
+          cat DOMAIN-DNS-STATUS.txt
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DOMAIN-DNS-STATUS.txt
+          git commit -m "Record USA Business Access domain DNS status" || exit 0
+          git push origin HEAD:main
