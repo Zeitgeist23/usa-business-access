@@ -1,0 +1,9 @@
+Vercel custom-domain route test
+UTC: 2026-08-31T21:32:03Z
+
+www.usabusinessaccess.com via 76.76.21.21 | HTTP=000 | bytes=0 | title= |  | 
+www.usabusinessaccess.com via 66.33.60.129 | HTTP=000 | bytes=0 | title= |  | 
+www.usabusinessaccess.com via 76.76.21.22 | HTTP=000 | bytes=0 | title= |  | 
+usabusinessaccess.com via 76.76.21.21 | HTTP=000 | bytes=0 | title= |  | 
+usabusinessaccess.com via 66.33.60.129 | HTTP=000 | bytes=0 | title= |  | 
+usabusinessaccess.com via 76.76.21.22 | HTTP=000 | bytes=0 | title= |  | 
