@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light;
+  --brand-navy: #062a57;
+  --focus: #e31820;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #fff; }
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: #fff;
+  color: var(--brand-navy);
+  font-family: Arial, Helvetica, sans-serif;
+}
+main, section, .image-panel { width: 100%; margin: 0; padding: 0; }
+.approved-page { width: 100%; }
+.image-panel { position: relative; line-height: 0; }
+.approved-hero,
+.approved-landing {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.mobile-page { display: none; }
+
+/* Transparent click targets over buttons already drawn in the approved hero. */
+.hotspot {
+  position: absolute;
+  z-index: 5;
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hotspot:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  background: rgb(255 255 255 / 10%);
+}
+.nav-company { left: 27.6%; top: 2.1%; width: 12.4%; height: 7.0%; }
+.nav-accounting { left: 40.3%; top: 2.1%; width: 11.8%; height: 7.0%; }
+.nav-banking { left: 52.2%; top: 2.1%; width: 13.9%; height: 7.0%; }
+.nav-growth { left: 66.0%; top: 2.1%; width: 13.2%; height: 7.0%; }
+.nav-services { left: 79.3%; top: 2.1%; width: 8.7%; height: 7.0%; }
+.nav-contact { left: 89.1%; top: 1.4%; width: 8.2%; height: 7.4%; }
+.hero-start { left: 4.1%; top: 47.0%; width: 17.6%; height: 5.7%; }
+.hero-explore { left: 23.1%; top: 47.0%; width: 13.8%; height: 5.7%; }
+
+/* 650 / 2146 = 30.289%; the source file is clipped only by the viewport. */
+.lower-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 733 / 1496;
+  overflow: hidden;
+  line-height: 0;
+  background: #fff;
+}
+.lower-source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-30.289%);
+  transform-origin: top left;
+}
+.anchor {
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  scroll-margin-top: 0;
+}
+.anchor-support { top: 2%; }
+.anchor-contact { top: 85%; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .desktop-page { display: none; }
+  .mobile-page { display: block; }
+}
+
+@media (min-width: 801px) {
+  .desktop-page { display: block; }
+  .mobile-page { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
