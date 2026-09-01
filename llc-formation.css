@@ -8,8 +8,15 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .primary-nav a{color:var(--blue);text-decoration:none;padding:22px 0;border-bottom:3px solid transparent}
 .primary-nav a:hover,.primary-nav a:focus-visible,.primary-nav a.active{border-color:var(--red)}
 .primary-nav .contact{padding:16px 24px;border:2px solid var(--blue);border-radius:5px}
-.approved-body{width:100%;overflow:hidden}
+.approved-body{position:relative;width:100%;overflow:hidden}
 .approved-body img{display:block;width:100%;height:auto}
+.body-hotspot{position:absolute;display:block;background:transparent}
+.body-hotspot:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.start{left:4.8%;top:21.9%;width:12.3%;height:3.2%}
+.consult{left:18.6%;top:21.9%;width:19.4%;height:3.2%}
+.faq1,.faq2,.faq3,.faq4,.faq5{left:51.7%;width:41.5%;height:1.55%}
+.faq1{top:86.9%}.faq2{top:88.6%}.faq3{top:90.3%}.faq4{top:92%}.faq5{top:93.7%}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .cta{display:flex;align-items:center;gap:28px;padding:18px 5vw;color:#fff;background:linear-gradient(105deg,#073d8e,#0056b7)}
 .cta div{margin-right:auto}
 .cta h2{margin:0;font-size:28px}
