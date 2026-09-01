@@ -1,0 +1,29 @@
+name: Verify LLC image blobs
+on:
+  push:
+    branches: [llc-image-verify]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+      - name: Verify candidates
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          from pathlib import Path
+          for p in sorted(Path('verify').glob('*')):
+              try:
+                  with Image.open(p) as im:
+                      print(f'{p}: format={im.format} size={im.size} mode={im.mode}')
+                      im.verify()
+                  with Image.open(p) as im:
+                      im.load()
+                      print(f'{p}: FULL_DECODE_OK')
+              except Exception as e:
+                  print(f'{p}: ERROR {type(e).__name__}: {e}')
+          PY
