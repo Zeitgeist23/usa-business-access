@@ -18,15 +18,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Download and verify the approved footer logo
-        env:
-          FOOTER_LOGO_URL: 'https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-01d0-81f5-96c4-2c53bb524025/raw?se=2026-09-01T00%3A50%3A02Z&sp=r&sv=2026-02-06&sr=b&scid=01a05a6c-124d-7496-a90c-4c61601c20c1&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-31T23%3A37%3A14Z&ske=2026-09-01T23%3A37%3A14Z&sks=b&skv=2026-02-06&sig=8tgBUTrSHjz2YGeWOCVlDADkFSxJFl1ePzh4QwZbOZA%3D'
+      - name: Verify the approved footer logo asset
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p assets
-          curl --fail --location --retry 5 --retry-all-errors "$FOOTER_LOGO_URL" \
-            --output assets/usa-business-access-footer-logo-v3.png
           echo '1850e095dc2228f4a46df1318f402c504656870905bef97eb55dcb1fd66c62c9  assets/usa-business-access-footer-logo-v3.png' | sha256sum --check -
 
       - name: Replace the handmade footer wordmark with the approved logo
@@ -35,45 +30,41 @@ jobs:
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
+          import re
 
           html_path = Path('index.html')
           html = html_path.read_text(encoding='utf-8')
 
-          old_html = '''              <div class="footer-wordmark" aria-label="USA Business Access">
-                <span class="footer-usa">US<span>A</span></span>
-                <span class="footer-divider" aria-hidden="true"></span>
-                <span class="footer-business">Business<br /><strong>Access</strong></span>
-                <span class="footer-globe" aria-hidden="true">◎</span>
-              </div>
-              <p>Your gateway to doing business<br />in America</p>'''
-
-          new_html = '''              <img
-                class="footer-logo-image"
-                src="assets/usa-business-access-footer-logo-v3.png"
-                alt="USA Business Access — Your Gateway to Doing Business in America"
-                width="720"
-                height="176"
-                decoding="async"
-                loading="eager"
-                draggable="false"
-              />'''
-
-          if old_html not in html:
-              raise SystemExit('Expected handmade footer wordmark block was not found; no changes committed.')
-
-          html = html.replace(old_html, new_html, 1)
-          html_path.write_text(html, encoding='utf-8')
+          if 'class="footer-logo-image"' not in html:
+              pattern = re.compile(
+                  r'^[ \t]*<div class="footer-wordmark" aria-label="USA Business Access">\n'
+                  r'.*?'
+                  r'^[ \t]*</div>\n'
+                  r'^[ \t]*<p>Your gateway to doing business<br />in America</p>',
+                  re.MULTILINE | re.DOTALL,
+              )
+              new_html = '\n'.join([
+                  '              <img',
+                  '                class="footer-logo-image"',
+                  '                src="assets/usa-business-access-footer-logo-v3.png"',
+                  '                alt="USA Business Access — Your Gateway to Doing Business in America"',
+                  '                width="720"',
+                  '                height="176"',
+                  '                decoding="async"',
+                  '                loading="eager"',
+                  '                draggable="false"',
+                  '              />',
+              ])
+              html, count = pattern.subn(new_html, html, count=1)
+              if count != 1:
+                  raise SystemExit('Expected handmade footer wordmark block was not found; no changes committed.')
+              html_path.write_text(html, encoding='utf-8')
 
           css_path = Path('styles.css')
           css = css_path.read_text(encoding='utf-8')
-          start_marker = '.footer-wordmark {'
-          end_marker = '.social-row {'
-          start = css.find(start_marker)
-          end = css.find(end_marker, start)
-          if start == -1 or end == -1:
-              raise SystemExit('Expected handmade footer wordmark CSS was not found; no changes committed.')
-
-          replacement = '''.footer-logo-image {
+          start = css.find('.footer-wordmark {')
+          end = css.find('.social-row {', start) if start != -1 else -1
+          new_css = '''.footer-logo-image {
             display: block;
             width: min(100%, 360px);
             height: auto;
@@ -84,8 +75,11 @@ jobs:
           }
 
           '''
-          css = css[:start] + replacement + css[end:]
-          css_path.write_text(css, encoding='utf-8')
+          if start != -1 and end != -1:
+              css = css[:start] + new_css + css[end:]
+              css_path.write_text(css, encoding='utf-8')
+          elif '.footer-logo-image {' not in css:
+              raise SystemExit('Expected handmade footer wordmark CSS was not found; no changes committed.')
           PY
 
       - name: Commit the approved footer-logo correction
@@ -94,7 +88,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html styles.css assets/usa-business-access-footer-logo-v3.png
+          git add index.html styles.css
           if git diff --cached --quiet; then
             echo "Approved footer-logo correction is already present."
             exit 0
