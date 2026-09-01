@@ -16,31 +16,44 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Pillow
         run: python -m pip install --quiet pillow
-      - name: Verify repository and production LLC image
+      - name: Verify repository and production LLC asset
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsSL --retry 5 --retry-delay 2 'https://www.usabusinessaccess.com/llc-formation' -o /tmp/live.html
           python - <<'PY'
-          import base64, re
-          from pathlib import Path
           from PIL import Image
-
-          def verify(path, label):
-              html = Path(path).read_text(encoding='utf-8')
-              m = re.search(r'src="data:image/(jpeg|webp|png);base64,([A-Za-z0-9+/=]+)"', html)
-              if not m:
-                  raise SystemExit(f'FAIL {label}: data URI not found')
-              fmt, payload = m.groups()
-              data = base64.b64decode(payload, validate=True)
-              out = Path(f'/tmp/{label}.{fmt}')
-              out.write_bytes(data)
-              with Image.open(out) as im:
-                  im.verify()
-              with Image.open(out) as im:
-                  im.load()
-                  print(f'PASS {label}: {im.format} {im.size[0]}x{im.size[1]} bytes={len(data)}')
-
-          verify('llc-formation.html', 'repo')
-          verify('/tmp/live.html', 'live')
+          p='assets/llc-formation-approved-v4.webp'
+          with Image.open(p) as im:
+              im.verify()
+          with Image.open(p) as im:
+              im.load()
+              assert im.size == (700, 933), im.size
+              print(f'PASS repo: {im.format} {im.size[0]}x{im.size[1]}')
           PY
+          for i in $(seq 1 20); do
+            if curl -fsSL --retry 2 'https://www.usabusinessaccess.com/assets/llc-formation-approved-v4.webp' -o /tmp/live.webp; then
+              if python - <<'PY'
+          from PIL import Image
+          p='/tmp/live.webp'
+          try:
+              with Image.open(p) as im:
+                  im.verify()
+              with Image.open(p) as im:
+                  im.load()
+                  assert im.size == (700, 933), im.size
+                  print(f'PASS live asset: {im.format} {im.size[0]}x{im.size[1]}')
+          except Exception as e:
+              print(f'WAIT live asset: {e}')
+              raise SystemExit(1)
+          PY
+              then
+                curl -fsSL 'https://www.usabusinessaccess.com/llc-formation' -o /tmp/live.html
+                grep -q '/assets/llc-formation-approved-v4.webp' /tmp/live.html
+                echo 'PASS live page references intact asset'
+                exit 0
+              fi
+            fi
+            sleep 5
+          done
+          echo 'FAIL: live LLC asset/page did not verify after retries'
+          exit 1
