@@ -114,7 +114,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: 1px;
+        right: 15%;
         width: 7px;
         height: 7px;
         border-right: 2px solid var(--brand-blue);
