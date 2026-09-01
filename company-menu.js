@@ -5,7 +5,7 @@
   if (!panel || !toggle || !menu) return;
 
   const llcLink = menu.querySelector('a[href="/llc-formation"]');
-  if (llcLink) llcLink.setAttribute('href', '/assets/llc-formation-static.jpg');
+  if (llcLink) llcLink.setAttribute('href', '/assets/llc-formation-approved-v2.jpg');
 
   let closeTimer = 0;
   const closeServicesMenu = () => {
