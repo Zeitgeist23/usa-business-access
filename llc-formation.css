@@ -38,16 +38,16 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-founder li::before{content:"✓";display:inline-block;margin-right:.6vw;color:#1235b1;font-weight:900}
 .sharp-process{position:absolute;z-index:3;inset:0;pointer-events:none;color:#062a61;text-align:center}
 .sharp-process>h2{position:absolute;left:31%;top:72.25%;width:38%;height:2.15%;margin:0;display:grid;place-items:center;background:#fff;font-size:clamp(17px,1.32vw,25px);line-height:1;font-weight:800;text-transform:uppercase}
-.process-numbers{position:absolute;left:7.4%;top:74.2%;width:85.2%;display:grid;grid-template-columns:repeat(5,1fr);color:#e31920;font-size:clamp(16px,1.18vw,23px);line-height:1;font-weight:800}
-.process-numbers span{justify-self:center;width:clamp(58px,4.2vw,80px);background:#fff;text-align:center}
+.process-numbers{position:absolute;left:7.4%;top:73.95%;width:85.2%;display:grid;grid-template-columns:repeat(5,1fr);color:#e31920;font-size:clamp(16px,1.18vw,23px);line-height:1;font-weight:800}
+.process-numbers span{justify-self:center;width:clamp(58px,4.2vw,80px);height:clamp(28px,1.9vw,36px);display:grid;place-items:center;background:#fff;text-align:center}
 .process-copy{position:absolute;left:5.2%;top:80.35%;width:89.6%;height:6.85%;display:grid;grid-template-columns:repeat(5,1fr)}
 .process-copy article{background:#fff;padding:.05vw .45vw}
 .process-copy h3{margin:0 0:.38vw;font-size:clamp(12px,.88vw,17px);line-height:1.16;font-weight:800}
 .process-copy p{margin:0;font-size:clamp(12px,.76vw,15px);line-height:1.34;font-weight:500}
 .sharp-why{position:absolute;z-index:3;left:4.7%;top:87.95%;width:43.9%;height:11.85%;overflow:hidden;color:#062a61}
 .sharp-why h2{position:absolute;left:9%;top:0;width:82%;height:14%;margin:0;display:grid;place-items:center;background:#fff;text-align:center;font-size:clamp(17px,1.25vw,24px);line-height:1;font-weight:800;text-transform:uppercase}
-.sharp-why article{position:absolute;width:35%;height:31%;padding:.1vw .25vw;background:#fff}
-.sharp-why .why-one{left:12.8%;top:24%}.sharp-why .why-two{left:62.3%;top:24%}.sharp-why .why-three{left:12.8%;top:63%}.sharp-why .why-four{left:62.3%;top:63%}
+.sharp-why article{position:absolute;width:36.5%;height:38%;padding:.1vw .25vw;background:#fff}
+.sharp-why .why-one{left:12.8%;top:19%}.sharp-why .why-two{left:62.3%;top:19%}.sharp-why .why-three{left:12.8%;top:59%}.sharp-why .why-four{left:62.3%;top:59%}
 .sharp-why h3{margin:0 0:.25vw;font-size:clamp(11px,.78vw,15px);line-height:1.15;font-weight:800;white-space:nowrap}
 .sharp-why p{margin:0;font-size:clamp(10px,.67vw,13px);line-height:1.35;font-weight:500}
 .sharp-faq{position:absolute;z-index:4;left:50.1%;top:88.05%;width:45.4%;height:11.7%;padding:0 1.4vw;background:#fff;color:#062a61}
