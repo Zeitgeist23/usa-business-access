@@ -18,6 +18,7 @@
   <link rel="preload" as="image" href="assets/usa-business-access-hero-approved.png" media="(min-width: 734px)" />
   <link rel="preload" as="image" href="assets/usa-business-access-landing-approved.png" media="(max-width: 733px)" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="services-menu.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -110,7 +111,101 @@
           <a class="hotspot nav-accounting" href="#complete-support" aria-label="Accounting and Tax"></a>
           <a class="hotspot nav-banking" href="#complete-support" aria-label="Banking and Compliance"></a>
           <a class="hotspot nav-growth" href="#complete-support" aria-label="Market Entry and Growth"></a>
-          <a class="hotspot nav-services" href="#complete-support" aria-label="Services"></a>
+          <button
+            class="hotspot nav-services services-menu-toggle"
+            type="button"
+            aria-label="Open Services menu"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="services-mega-menu"
+          ></button>
+
+          <div
+            class="services-mega-menu"
+            id="services-mega-menu"
+            aria-label="USA Business Access services"
+            aria-hidden="true"
+          >
+            <section class="services-menu-column" aria-labelledby="services-company-heading">
+              <div class="services-menu-heading">
+                <span class="services-menu-icon" aria-hidden="true">
+                  <svg><use href="#icon-building"></use></svg>
+                </span>
+                <div>
+                  <span class="services-menu-kicker">Services</span>
+                  <h2 id="services-company-heading">Company Services</h2>
+                </div>
+              </div>
+              <div class="services-menu-links">
+                <a href="#company-formation"><span>Company Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#accounting-tax"><span>Accounting &amp; Tax</span><b aria-hidden="true">→</b></a>
+                <a href="#banking-compliance"><span>Banking &amp; Compliance</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="services-menu-column" aria-labelledby="services-credit-heading">
+              <div class="services-menu-heading">
+                <span class="services-menu-icon" aria-hidden="true">
+                  <svg><use href="#icon-bank"></use></svg>
+                </span>
+                <div>
+                  <span class="services-menu-kicker">Capital readiness</span>
+                  <h2 id="services-credit-heading">Credit &amp; Financing</h2>
+                </div>
+              </div>
+              <div class="services-menu-links">
+                <a href="#business-credit-readiness"><span>Business Credit Readiness</span><b aria-hidden="true">→</b></a>
+                <a href="#personal-credit-readiness"><span>Personal Credit Readiness</span><b aria-hidden="true">→</b></a>
+                <a href="#sba-loan-guidance"><span>SBA Loan Guidance &amp; Lender Access</span><b aria-hidden="true">→</b></a>
+                <a href="#conventional-financing"><span>Conventional Financing</span><b aria-hidden="true">→</b></a>
+              </div>
+              <p class="services-menu-note">Financing is provided by participating lenders. USA Business Access is not a lender.</p>
+            </section>
+
+            <section class="services-menu-column" aria-labelledby="services-market-heading">
+              <div class="services-menu-heading">
+                <span class="services-menu-icon" aria-hidden="true">
+                  <svg><use href="#icon-globe"></use></svg>
+                </span>
+                <div>
+                  <span class="services-menu-kicker">U.S. opportunity</span>
+                  <h2 id="services-market-heading">Market Access &amp; Advisory</h2>
+                </div>
+              </div>
+              <div class="services-menu-links">
+                <a href="#market-entry-growth"><span>Market Entry &amp; Growth</span><b aria-hidden="true">→</b></a>
+                <a href="#us-expansion-strategy"><span>U.S. Expansion Strategy</span><b aria-hidden="true">→</b></a>
+                <a href="#business-planning-feasibility"><span>Business Planning &amp; Feasibility</span><b aria-hidden="true">→</b></a>
+                <a href="#buy-us-business"><span>Buy a U.S. Business</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="services-menu-column services-menu-learning" aria-labelledby="services-learning-heading">
+              <div class="services-menu-heading">
+                <span class="services-menu-icon" aria-hidden="true">
+                  <svg><use href="#icon-guide"></use></svg>
+                </span>
+                <div>
+                  <span class="services-menu-kicker">Education</span>
+                  <h2 id="services-learning-heading">Learning Center</h2>
+                </div>
+              </div>
+              <a class="services-menu-feature" href="#learning-title">
+                <strong>Explore the Learning Center</strong>
+                <span>Practical guidance for forming, financing, operating, and growing a U.S. business.</span>
+              </a>
+              <div class="services-menu-links services-menu-resource-links">
+                <a href="#learning-title"><span>Guides &amp; Articles</span><b aria-hidden="true">→</b></a>
+                <a href="#learning-title"><span>Tools &amp; Checklists</span><b aria-hidden="true">→</b></a>
+                <a href="#learning-title"><span>State Resources</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <div class="services-menu-footer">
+              <span>One coordinated partner for every stage of your U.S. business journey.</span>
+              <a href="#contact">Speak with our team <b aria-hidden="true">→</b></a>
+            </div>
+          </div>
           <a class="hotspot nav-contact" href="#contact" aria-label="Contact"></a>
           <a class="hotspot hero-start" href="#contact" aria-label="Start Your U.S. Journey"></a>
           <a class="hotspot hero-explore" href="#complete-support" aria-label="Explore Services"></a>
@@ -129,9 +224,9 @@
                 <h3>Company Services</h3>
                 <span class="red-rule" aria-hidden="true"></span>
                 <ul class="service-list">
-                  <li><svg aria-hidden="true"><use href="#icon-building"></use></svg><span>Company Formation</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-calculator"></use></svg><span>Accounting &amp; Tax</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-bank"></use></svg><span>Banking &amp; Compliance</span></li>
+                  <li id="company-formation"><svg aria-hidden="true"><use href="#icon-building"></use></svg><span>Company Formation</span></li>
+                  <li id="accounting-tax"><svg aria-hidden="true"><use href="#icon-calculator"></use></svg><span>Accounting &amp; Tax</span></li>
+                  <li id="banking-compliance"><svg aria-hidden="true"><use href="#icon-bank"></use></svg><span>Banking &amp; Compliance</span></li>
                 </ul>
                 <a class="text-link" href="#contact">Explore <span aria-hidden="true">→</span></a>
               </article>
@@ -141,10 +236,10 @@
                 <h3>Credit &amp; Financing</h3>
                 <span class="red-rule" aria-hidden="true"></span>
                 <ul class="service-list">
-                  <li><svg aria-hidden="true"><use href="#icon-card"></use></svg><span>Business Credit Readiness</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-user-card"></use></svg><span>Personal Credit Readiness</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-document"></use></svg><span>SBA Loan Guidance &amp;<br />Lender Access</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-money"></use></svg><span>Conventional Financing</span></li>
+                  <li id="business-credit-readiness"><svg aria-hidden="true"><use href="#icon-card"></use></svg><span>Business Credit Readiness</span></li>
+                  <li id="personal-credit-readiness"><svg aria-hidden="true"><use href="#icon-user-card"></use></svg><span>Personal Credit Readiness</span></li>
+                  <li id="sba-loan-guidance"><svg aria-hidden="true"><use href="#icon-document"></use></svg><span>SBA Loan Guidance &amp;<br />Lender Access</span></li>
+                  <li id="conventional-financing"><svg aria-hidden="true"><use href="#icon-money"></use></svg><span>Conventional Financing</span></li>
                 </ul>
                 <a class="text-link" href="#contact">Explore <span aria-hidden="true">→</span></a>
               </article>
@@ -154,10 +249,10 @@
                 <h3>Market Access &amp; Advisory</h3>
                 <span class="red-rule" aria-hidden="true"></span>
                 <ul class="service-list">
-                  <li><svg aria-hidden="true"><use href="#icon-target"></use></svg><span>Market Entry &amp; Growth</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-chart"></use></svg><span>U.S. Expansion Strategy</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-clipboard"></use></svg><span>Business Planning &amp;<br />Feasibility</span></li>
-                  <li><svg aria-hidden="true"><use href="#icon-card"></use></svg><span>Buy a U.S. Business</span></li>
+                  <li id="market-entry-growth"><svg aria-hidden="true"><use href="#icon-target"></use></svg><span>Market Entry &amp; Growth</span></li>
+                  <li id="us-expansion-strategy"><svg aria-hidden="true"><use href="#icon-chart"></use></svg><span>U.S. Expansion Strategy</span></li>
+                  <li id="business-planning-feasibility"><svg aria-hidden="true"><use href="#icon-clipboard"></use></svg><span>Business Planning &amp;<br />Feasibility</span></li>
+                  <li id="buy-us-business"><svg aria-hidden="true"><use href="#icon-card"></use></svg><span>Buy a U.S. Business</span></li>
                 </ul>
                 <a class="text-link" href="#contact">Explore <span aria-hidden="true">→</span></a>
               </article>
