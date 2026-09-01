@@ -614,7 +614,7 @@ a { color: inherit; }
   right: 3.8%;
   left: 14.5%;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: hidden;
   visibility: hidden;
   border: 1px solid rgb(9 46 103 / 16%);
