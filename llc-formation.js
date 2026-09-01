@@ -7,7 +7,8 @@
     .brand img{position:absolute!important;width:315px!important;height:auto!important;max-width:none!important;left:0;top:-55px;object-fit:initial!important}
     .main-nav{gap:clamp(14px,1.55vw,28px);font-size:10.5px}
     .main-nav>a{display:none}
-    .llc-nav-item{position:relative;display:flex;align-items:center}
+    .main-nav>.active{border-bottom:0!important;padding-bottom:0!important}
+    .llc-nav-item{position:relative;display:flex;align-items:center;border-bottom:0!important;padding-bottom:0!important}
     .llc-nav-button{appearance:none;border:0;background:transparent;color:var(--navy);font:inherit;font-weight:700;text-transform:uppercase;white-space:nowrap;padding:14px 4px;cursor:pointer}
     .llc-nav-item.active>.llc-nav-button{border-bottom:3px solid var(--red)}
     .llc-nav-button::after{content:"";display:inline-block;width:6px;height:6px;margin-left:9px;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .16s ease}
@@ -18,13 +19,15 @@
     .llc-nav-dropdown a:hover,.llc-nav-dropdown a:focus-visible{background:#f1f5fa;outline:none}
     .llc-contact{display:inline-flex!important;padding:12px 18px!important;border:1px solid var(--blue)!important;border-radius:4px!important}
 
-    .hero{grid-template-columns:54% 46%;min-height:356px}
+    .hero{grid-template-columns:52% 48%;min-height:384px}
     .hero-copy{padding:38px 5.5vw 34px}
     .hero h1{font-size:clamp(39px,3.35vw,56px);line-height:1.04}
     .hero-lead{max-width:545px;margin:19px 0 24px;font-size:16px}
-    .hero-media{min-height:356px;background:#f6f7f8;display:grid;place-items:center}
-    .hero-slide{inset:auto!important;left:50%!important;top:50%!important;width:auto!important;height:auto!important;max-width:96%!important;max-height:94%!important;transform:translate(-50%,-50%)!important;object-fit:contain!important;object-position:center!important;padding:0!important;background:transparent!important;image-rendering:auto}
-    .slide-secondary{max-width:72%!important;max-height:84%!important}
+    .hero-media{position:relative;min-height:384px;overflow:hidden;background:#f4f5f6;display:block}
+    .hero-slide{position:absolute!important;inset:0!important;left:0!important;top:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;transform:none!important;opacity:0;transition:opacity 1s ease;object-position:center!important;padding:0!important;background:transparent!important;image-rendering:auto}
+    .hero-slide.is-active{opacity:1}
+    .slide-primary{object-fit:cover!important}
+    .slide-secondary{object-fit:cover!important}
 
     .benefits{margin-top:-12px}
     .benefits article{padding:20px 24px}
@@ -46,7 +49,7 @@
       .main-nav{display:flex;flex-wrap:wrap;justify-content:center}
       .llc-nav-dropdown{left:50%;transform:translate(-50%,-6px)}
       .llc-nav-item.open>.llc-nav-dropdown{transform:translate(-50%,0)}
-      .hero{grid-template-columns:1fr}.hero-media{min-height:310px}.hero-slide{max-width:94%!important;max-height:92%!important}.benefits{margin-top:0}
+      .hero{grid-template-columns:1fr}.hero-media{min-height:310px}.benefits{margin-top:0}
     }
   `;
   document.head.appendChild(style);
