@@ -582,3 +582,31 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* USA BUSINESS ACCESS APPROVED FOOTER LOGO FIX
+   Uses the owner-approved, non-generative footer logo asset. */
+.footer-wordmark {
+  display: block !important;
+  width: min(360px, 100%) !important;
+  max-width: 360px !important;
+  height: auto !important;
+  aspect-ratio: 720 / 176;
+  margin: 0;
+  background-color: #031f45;
+  background-image: url("assets/usa-business-access-footer-logo-v3.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  color: transparent !important;
+  line-height: 0 !important;
+  text-transform: none !important;
+}
+.footer-wordmark > * {
+  display: none !important;
+}
+.footer-brand > p {
+  display: none !important;
+}
+.footer-brand .social-row {
+  margin-top: 18px;
+}
