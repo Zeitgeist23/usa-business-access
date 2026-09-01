@@ -40,6 +40,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-process>h2{position:absolute;left:31%;top:72.25%;width:38%;height:2.15%;margin:0;display:grid;place-items:center;background:#fff;font-size:clamp(17px,1.32vw,25px);line-height:1;font-weight:800;text-transform:uppercase}
 .process-numbers{position:absolute;left:7.4%;top:73.95%;width:85.2%;display:grid;grid-template-columns:repeat(5,1fr);color:#e31920;font-size:clamp(16px,1.18vw,23px);line-height:1;font-weight:800}
 .process-numbers span{justify-self:center;width:clamp(58px,4.2vw,80px);height:clamp(28px,1.9vw,36px);display:grid;place-items:center;background:#fff;text-align:center}
+.process-numbers span:nth-child(2){transform:translateX(-2.6vw)}
 .process-copy{position:absolute;left:5.2%;top:80.35%;width:89.6%;height:6.85%;display:grid;grid-template-columns:repeat(5,1fr)}
 .process-copy article{background:#fff;padding:.05vw .45vw}
 .process-copy h3{margin:0 0:.38vw;font-size:clamp(12px,.88vw,17px);line-height:1.16;font-weight:800}
