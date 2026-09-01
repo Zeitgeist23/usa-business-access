@@ -1,0 +1,48 @@
+name: Verify live LLC page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/verify-live-llc.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+      - name: Fetch and verify production page
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 5 --retry-delay 2 'https://www.usabusinessaccess.com/llc-formation' -o /tmp/live.html
+          python - <<'PY'
+          import base64, hashlib, re
+          from pathlib import Path
+          from PIL import Image
+
+          html = Path('/tmp/live.html').read_text(encoding='utf-8')
+          m = re.search(r'src="data:image/jpeg;base64,([A-Za-z0-9+/=]+)"', html)
+          if not m:
+              raise SystemExit('FAIL: embedded JPEG data URI not found in production HTML')
+          data = base64.b64decode(m.group(1), validate=True)
+          sha = hashlib.sha256(data).hexdigest()
+          expected = 'c36c45eb354c57067e20f04501ba01cc561cbadf24304ad17ed65d9367617d6b'
+          if sha != expected:
+              raise SystemExit(f'FAIL: SHA mismatch: {sha}')
+          p = Path('/tmp/llc.jpg')
+          p.write_bytes(data)
+          with Image.open(p) as im:
+              im.verify()
+          with Image.open(p) as im:
+              im.load()
+              if im.size != (1086, 1448):
+                  raise SystemExit(f'FAIL: wrong dimensions: {im.size}')
+              print(f'PASS: production page embeds valid {im.format} {im.size[0]}x{im.size[1]} image')
+          print(f'PASS: SHA-256 {sha}')
+          print(f'PASS: production HTML bytes {len(html.encode("utf-8"))}')
+          PY
