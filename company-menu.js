@@ -4,9 +4,6 @@
   const menu = document.getElementById('company-mega-menu');
   if (!panel || !toggle || !menu) return;
 
-  const llcLink = menu.querySelector('a[href="/llc-formation"]');
-  if (llcLink) llcLink.setAttribute('href', '#company-formation');
-
   let closeTimer = 0;
   const closeServicesMenu = () => {
     const servicesToggle = document.querySelector('.services-menu-toggle');
