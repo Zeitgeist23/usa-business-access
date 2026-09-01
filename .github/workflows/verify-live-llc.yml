@@ -20,6 +20,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Final verification of the normal WebP asset used by /llc-formation.
           python - <<'PY'
           from PIL import Image
           p='assets/llc-formation-approved-v4.webp'
