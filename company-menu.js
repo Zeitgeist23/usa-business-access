@@ -4,7 +4,10 @@
   const menu = document.getElementById('company-mega-menu');
   if (!panel || !toggle || !menu) return;
 
- let closeTimer = 0;
+  const llcLink = menu.querySelector('a[href="/llc-formation"]');
+  if (llcLink) llcLink.setAttribute('href', '#company-formation');
+
+  let closeTimer = 0;
   const closeServicesMenu = () => {
     const servicesToggle = document.querySelector('.services-menu-toggle');
     const servicesMenu = document.getElementById('services-mega-menu');
