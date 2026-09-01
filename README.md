@@ -1,17 +1,17 @@
 # USA Business Access
 
-Official website for USA Business Access — coordinated U.S. company formation, accounting, tax, banking, compliance, financing access, market entry, growth, and business acquisition support.
+USA Business Access helps international entrepreneurs establish, operate, finance, and grow businesses in the United States.
 
-## Approved visual assets
+## Production
 
-This repository uses the owner-approved landing-page artwork without generative alteration:
+- Domain: https://www.usabusinessaccess.com
+- Deployment: Vercel
+- Repository: Zeitgeist23/usa-business-access
 
-- `assets/usa-business-access-hero-approved.png`
-- `assets/usa-business-access-landing-approved.png`
-- `assets/usa-business-access-official-logo.png`
+## Visual assets
 
-The desktop hero is loaded directly from the approved PNG. It is not redrawn, regenerated, filtered, recolored, retouched, or replaced. The lower desktop content is displayed from the approved full-page screenshot. On small screens, the approved full-page screenshot is rendered directly.
+Approved visual assets are stored in `/assets` and should not be regenerated or altered without explicit approval.
 
-## Deployment
+## Site integrity
 
-The site is a static Vercel project. Connect this repository to Vercel and deploy the `main` branch with no framework preset and no build command. Add both `usabusinessaccess.com` and `www.usabusinessaccess.com` under **Settings → Domains** and make `www.usabusinessaccess.com` canonical.
+The approved homepage hero is treated as a protected visual asset. Interior service pages may use approved deterministic static imagery.
