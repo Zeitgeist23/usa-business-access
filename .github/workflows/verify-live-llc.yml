@@ -30,7 +30,7 @@ jobs:
               assert im.size == (700, 933), im.size
               print(f'PASS repo: {im.format} {im.size[0]}x{im.size[1]}')
           PY
-          for i in $(seq 1 20); do
+          for i in $(seq 1 30); do
             if curl -fsSL --retry 2 'https://www.usabusinessaccess.com/assets/llc-formation-approved-v4.webp' -o /tmp/live.webp; then
               if python - <<'PY'
           from PIL import Image
