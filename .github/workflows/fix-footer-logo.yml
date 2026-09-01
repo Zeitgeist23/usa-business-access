@@ -1,0 +1,77 @@
+name: Replace footer with approved USA Business Access logo
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fix-footer-logo.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-footer-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Add the approved footer logo and correct the footer styling
+        env:
+          FOOTER_LOGO_URL: 'https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-a118-81f5-a968-aa9f98a3a4d7/raw?se=2026-09-01T00%3A49%3A26Z&sp=r&sv=2026-02-06&sr=b&scid=01a05a69-2609-76bb-bc0e-fc74fd6f7a19&skoid=38550de5-1fab-49d1-9ebb-83af5557cc43&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-08-31T23%3A31%3A22Z&ske=2026-09-01T23%3A31%3A22Z&sks=b&skv=2026-02-06&sig=MhRotR6I1XCSMDoPWNxMVBwl1heTnDbyjOFoDuSb49k%3D'
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --fail --location --retry 5 --retry-all-errors "$FOOTER_LOGO_URL" \
+            --output assets/usa-business-access-footer-logo-v3.png
+
+          echo '1850e095dc2228f4a46df1318f402c504656870905bef97eb55dcb1fd66c62c9  assets/usa-business-access-footer-logo-v3.png' \
+            | sha256sum --check
+
+          if ! grep -q 'USA BUSINESS ACCESS APPROVED FOOTER LOGO FIX' styles.css; then
+            cat >> styles.css <<'CSS'
+
+/* USA BUSINESS ACCESS APPROVED FOOTER LOGO FIX
+   Uses the owner-approved, non-generative footer logo asset. */
+.footer-wordmark {
+  display: block !important;
+  width: min(360px, 100%) !important;
+  max-width: 360px !important;
+  height: auto !important;
+  aspect-ratio: 720 / 176;
+  margin: 0;
+  background-color: #031f45;
+  background-image: url("assets/usa-business-access-footer-logo-v3.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  color: transparent !important;
+  line-height: 0 !important;
+  text-transform: none !important;
+}
+.footer-wordmark > * {
+  display: none !important;
+}
+.footer-brand > p {
+  display: none !important;
+}
+.footer-brand .social-row {
+  margin-top: 18px;
+}
+CSS
+          fi
+
+      - name: Commit the live footer correction
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/usa-business-access-footer-logo-v3.png styles.css
+          if git diff --cached --quiet; then
+            echo "Footer correction is already present."
+            exit 0
+          fi
+          git commit -m "Replace footer wordmark with approved logo"
+          git push origin HEAD:main
