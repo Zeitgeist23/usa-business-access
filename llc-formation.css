@@ -18,6 +18,11 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .faq1,.faq2,.faq3,.faq4,.faq5{left:51.7%;width:41.5%;height:1.55%}
 .faq1{top:86.9%}.faq2{top:88.6%}.faq3{top:90.3%}.faq4{top:92%}.faq5{top:93.7%}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.sharp-benefits{position:absolute;left:3.7%;top:32.95%;width:92.6%;height:8.65%;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;color:#092e69;text-align:center}
+.sharp-benefits article{display:flex;flex-direction:column;align-items:center;padding:.15vw .6vw;background:#fff;border-right:1px solid #e3e7ee}
+.sharp-benefits article:last-child{border-right:0}
+.sharp-benefits h3{margin:0 0:.55vw;font-size:clamp(14px,1.05vw,20px);line-height:1.16;font-weight:800}
+.sharp-benefits p{margin:0;font-size:clamp(11px,.84vw,16px);line-height:1.4;font-weight:400}
 .sharp-services{position:absolute;left:2.7%;top:51.45%;width:94.6%;height:7.95%;display:grid;grid-template-columns:repeat(6,1fr);background:#fff;color:#092e69;text-align:center}
 .sharp-services article{display:flex;flex-direction:column;align-items:center;padding:.05vw .45vw;background:#fff;border-right:1px solid #e3e7ee}
 .sharp-services article:last-child{border-right:0}
