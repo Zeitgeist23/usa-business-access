@@ -21,8 +21,8 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-benefits{position:absolute;left:3.7%;top:32.95%;width:92.6%;height:8.65%;display:grid;grid-template-columns:repeat(4,1fr);background:#fff;color:#092e69;text-align:center}
 .sharp-benefits article{display:flex;flex-direction:column;align-items:center;padding:.15vw .6vw;background:#fff;border-right:1px solid #e3e7ee}
 .sharp-benefits article:last-child{border-right:0}
-.sharp-benefits h3{margin:0 0:.55vw;font-size:clamp(14px,1.05vw,20px);line-height:1.16;font-weight:800}
-.sharp-benefits p{margin:0;font-size:clamp(11px,.84vw,16px);line-height:1.4;font-weight:400}
+.sharp-benefits h3{margin:0 0:.55vw;font-size:clamp(15px,1.1vw,21px);line-height:1.16;font-weight:800}
+.sharp-benefits p{margin:0;font-size:clamp(12px,.9vw,17px);line-height:1.38;font-weight:400}
 .sharp-services{position:absolute;left:2.7%;top:51.45%;width:94.6%;height:7.95%;display:grid;grid-template-columns:repeat(6,1fr);background:#fff;color:#092e69;text-align:center}
 .sharp-services article{display:flex;flex-direction:column;align-items:center;padding:.05vw .45vw;background:#fff;border-right:1px solid #e3e7ee}
 .sharp-services article:last-child{border-right:0}
