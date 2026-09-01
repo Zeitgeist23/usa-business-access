@@ -1,0 +1,386 @@
+name: Add Company Formation hover menu
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/add-company-formation-menu.yml
+
+permissions:
+  contents: write
+
+jobs:
+  add-company-menu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Add Company & Entity Formation hover menu
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
+
+          stylesheet = '  <link rel="stylesheet" href="styles.css" />'
+          company_script = '  <script src="company-menu.js" defer></script>'
+          if company_script not in html:
+              html = html.replace(stylesheet, stylesheet + '\n' + company_script, 1)
+
+          old = '          <a class="hotspot nav-company" href="#complete-support" aria-label="Company Formation"></a>'
+          new = '''          <button
+            class="hotspot nav-company company-menu-toggle"
+            type="button"
+            aria-label="Open Company & Entity Formation menu"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="company-mega-menu"
+          ></button>
+
+          <div
+            class="company-mega-menu"
+            id="company-mega-menu"
+            aria-label="Company and entity formation services"
+            aria-hidden="true"
+          >
+            <section class="company-menu-column" aria-labelledby="company-us-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-building"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">U.S. entities</span>
+                  <h2 id="company-us-heading">U.S. Business Entities</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>LLC Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>C-Corporation Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>S-Corporation Election &amp; Setup</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Professional Entities</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Partnership Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Foreign-Owned U.S. Companies</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-nonprofit-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-file-check"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">Tax-exempt structures</span>
+                  <h2 id="company-nonprofit-heading">Nonprofit Organizations</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>Nonprofit Corporation Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>501(c)(3) Tax-Exempt Application</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Charitable &amp; Foundation Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-trust-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-shield"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">Trust planning</span>
+                  <h2 id="company-trust-heading">Trust &amp; Asset Structures</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>U.S. Domestic Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Revocable Living Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Irrevocable Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Business / Investment Trust Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-international-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-globe"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">International structures</span>
+                  <h2 id="company-international-heading">International Structures</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>Offshore LLCs</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Offshore Corporations</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Offshore Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>International Holding Companies</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>U.S. + Foreign Multi-Entity Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <div class="company-menu-footer">
+              <span>Legal, tax, fiduciary and formation services may be provided by qualified independent professionals where required.</span>
+              <a href="#contact">Discuss your structure <b aria-hidden="true">→</b></a>
+            </div>
+          </div>'''
+
+          if 'id="company-mega-menu"' not in html:
+              if old not in html:
+                  raise SystemExit('Company Formation header hotspot not found.')
+              html = html.replace(old, new, 1)
+          index.write_text(html, encoding='utf-8')
+
+          css_path = Path('styles.css')
+          css = css_path.read_text(encoding='utf-8')
+          marker = '/* USA BUSINESS ACCESS COMPANY FORMATION MEGA MENU */'
+          if marker not in css:
+              css += r'''
+
+/* USA BUSINESS ACCESS COMPANY FORMATION MEGA MENU */
+.company-menu-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  font: inherit;
+}
+.company-menu-toggle[aria-expanded="true"] {
+  background: rgb(8 45 99 / 6%);
+}
+.company-mega-menu {
+  position: absolute;
+  z-index: 41;
+  top: 8.85%;
+  right: 3.8%;
+  left: 4.1%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  visibility: hidden;
+  border: 1px solid rgb(9 46 103 / 16%);
+  border-top: 4px solid var(--brand-red);
+  border-radius: 0 0 15px 15px;
+  background: rgb(255 255 255 / 98.5%);
+  box-shadow: 0 22px 58px rgb(0 24 65 / 30%);
+  color: var(--text-body);
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.hero-panel.company-menu-open .company-mega-menu,
+.company-mega-menu:focus-within {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.company-menu-column {
+  min-width: 0;
+  padding: 25px 20px 24px;
+}
+.company-menu-column + .company-menu-column {
+  border-left: 1px solid #e1e7f0;
+}
+.company-menu-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 48px;
+  margin-bottom: 13px;
+}
+.company-menu-icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgb(16 47 131 / 18%);
+  border-radius: 50%;
+  background: #f7f9fd;
+  color: var(--brand-blue);
+}
+.company-menu-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.company-menu-kicker {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--brand-red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.company-menu-heading h2 {
+  margin: 0;
+  color: var(--brand-blue);
+  font-size: clamp(14px, 1.05vw, 18px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.company-menu-links {
+  display: grid;
+  gap: 2px;
+}
+.company-menu-links a {
+  display: flex;
+  min-height: 35px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  color: #1c3766;
+  font-size: clamp(11px, .82vw, 14px);
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: background .14s ease, color .14s ease, transform .14s ease;
+}
+.company-menu-links a:hover,
+.company-menu-links a:focus-visible {
+  background: #f0f5fb;
+  color: var(--brand-blue);
+  outline: none;
+  transform: translateX(2px);
+}
+.company-menu-links a b,
+.company-menu-footer a b {
+  flex: 0 0 auto;
+  color: var(--brand-red);
+  font-size: 15px;
+}
+.company-menu-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 13px 22px;
+  border-top: 1px solid #e1e7f0;
+  background: #f8fafc;
+  color: #63738d;
+  font-size: 10px;
+  line-height: 1.35;
+}
+.company-menu-footer a {
+  flex: 0 0 auto;
+  color: var(--brand-blue);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media (max-width: 1040px) and (min-width: 734px) {
+  .company-mega-menu {
+    left: 2.5%;
+    right: 2.5%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-height: 72vh;
+    overflow-y: auto;
+  }
+}
+'''
+          css_path.write_text(css, encoding='utf-8')
+
+          Path('company-menu.js').write_text(r'''(() => {
+  const panel = document.querySelector('.hero-panel');
+  const toggle = document.querySelector('.company-menu-toggle');
+  const menu = document.getElementById('company-mega-menu');
+  if (!panel || !toggle || !menu) return;
+
+  let closeTimer = 0;
+
+  const closeServicesMenu = () => {
+    const servicesToggle = document.querySelector('.services-menu-toggle');
+    const servicesMenu = document.getElementById('services-mega-menu');
+    panel.classList.remove('services-menu-open');
+    if (servicesToggle) {
+      servicesToggle.setAttribute('aria-expanded', 'false');
+      servicesToggle.setAttribute('aria-label', 'Open Services menu');
+    }
+    if (servicesMenu) servicesMenu.setAttribute('aria-hidden', 'true');
+  };
+
+  const setOpen = (open) => {
+    window.clearTimeout(closeTimer);
+    if (open) closeServicesMenu();
+    panel.classList.toggle('company-menu-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close Company & Entity Formation menu' : 'Open Company & Entity Formation menu');
+    menu.setAttribute('aria-hidden', String(!open));
+  };
+
+  const openMenu = () => setOpen(true);
+  const closeMenu = () => setOpen(false);
+  const scheduleClose = () => {
+    window.clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(closeMenu, 180);
+  };
+
+  [toggle, menu].forEach((element) => {
+    element.addEventListener('pointerenter', openMenu);
+    element.addEventListener('pointerleave', scheduleClose);
+  });
+
+  toggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    setOpen(!panel.classList.contains('company-menu-open'));
+  });
+
+  toggle.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      openMenu();
+      menu.querySelector('a')?.focus();
+    }
+  });
+
+  menu.addEventListener('focusin', openMenu);
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeMenu();
+  });
+
+  document.addEventListener('focusin', (event) => {
+    if (!toggle.contains(event.target) && !menu.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('click', (event) => {
+    if (!toggle.contains(event.target) && !menu.contains(event.target)) closeMenu();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && panel.classList.contains('company-menu-open')) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('scroll', closeMenu, { passive: true });
+  window.addEventListener('resize', closeMenu, { passive: true });
+})();
+''', encoding='utf-8')
+
+          services_path = Path('services-menu.js')
+          services = services_path.read_text(encoding='utf-8')
+          if "window.addEventListener('scroll', closeMenu" not in services:
+              services = services.replace("  window.addEventListener('resize', closeMenu, { passive: true });", "  window.addEventListener('scroll', closeMenu, { passive: true });\n  window.addEventListener('resize', closeMenu, { passive: true });")
+          if "panel.classList.remove('company-menu-open')" not in services:
+              services = services.replace("  const setOpen = (open) => {\n    window.clearTimeout(closeTimer);", "  const setOpen = (open) => {\n    window.clearTimeout(closeTimer);\n    if (open) {\n      const companyToggle = document.querySelector('.company-menu-toggle');\n      const companyMenu = document.getElementById('company-mega-menu');\n      panel.classList.remove('company-menu-open');\n      if (companyToggle) {\n        companyToggle.setAttribute('aria-expanded', 'false');\n        companyToggle.setAttribute('aria-label', 'Open Company & Entity Formation menu');\n      }\n      if (companyMenu) companyMenu.setAttribute('aria-hidden', 'true');\n    }")
+          services_path.write_text(services, encoding='utf-8')
+          PY
+
+      - name: Commit Company Formation menu
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html styles.css company-menu.js services-menu.js
+          git commit -m "Add Company and Entity Formation hover menu"
+          git push origin HEAD:main
