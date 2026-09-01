@@ -18,6 +18,7 @@
   <link rel="preload" as="image" href="assets/usa-business-access-hero-approved.png" media="(min-width: 734px)" />
   <link rel="preload" as="image" href="assets/usa-business-access-landing-approved.png" media="(max-width: 733px)" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="company-menu.js" defer></script>
   <script src="services-menu.js" defer></script>
   <script type="application/ld+json">
   {
@@ -107,7 +108,92 @@
         />
 
         <nav class="image-hotspots" aria-label="Primary navigation">
-          <a class="hotspot nav-company" href="#complete-support" aria-label="Company Formation"></a>
+          <button
+            class="hotspot nav-company company-menu-toggle"
+            type="button"
+            aria-label="Open Company & Entity Formation menu"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="company-mega-menu"
+          ></button>
+
+          <div
+            class="company-mega-menu"
+            id="company-mega-menu"
+            aria-label="Company and entity formation services"
+            aria-hidden="true"
+          >
+            <section class="company-menu-column" aria-labelledby="company-us-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-building"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">U.S. entities</span>
+                  <h2 id="company-us-heading">U.S. Business Entities</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>LLC Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>C-Corporation Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>S-Corporation Election &amp; Setup</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Professional Entities</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Partnership Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Foreign-Owned U.S. Companies</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-nonprofit-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-file-check"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">Tax-exempt structures</span>
+                  <h2 id="company-nonprofit-heading">Nonprofit Organizations</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>Nonprofit Corporation Formation</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>501(c)(3) Tax-Exempt Application</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Charitable &amp; Foundation Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-trust-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-shield"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">Trust planning</span>
+                  <h2 id="company-trust-heading">Trust &amp; Asset Structures</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>U.S. Domestic Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Revocable Living Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Irrevocable Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Business / Investment Trust Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <section class="company-menu-column" aria-labelledby="company-international-heading">
+              <div class="company-menu-heading">
+                <span class="company-menu-icon" aria-hidden="true"><svg><use href="#icon-globe"></use></svg></span>
+                <div>
+                  <span class="company-menu-kicker">International structures</span>
+                  <h2 id="company-international-heading">International Structures</h2>
+                </div>
+              </div>
+              <div class="company-menu-links">
+                <a href="#company-formation"><span>Offshore LLCs</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Offshore Corporations</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>Offshore Trusts</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>International Holding Companies</span><b aria-hidden="true">→</b></a>
+                <a href="#company-formation"><span>U.S. + Foreign Multi-Entity Structures</span><b aria-hidden="true">→</b></a>
+              </div>
+            </section>
+
+            <div class="company-menu-footer">
+              <span>Legal, tax, fiduciary and formation services may be provided by qualified independent professionals where required.</span>
+              <a href="#contact">Discuss your structure <b aria-hidden="true">→</b></a>
+            </div>
+          </div>
           <a class="hotspot nav-accounting" href="#complete-support" aria-label="Accounting and Tax"></a>
           <a class="hotspot nav-banking" href="#complete-support" aria-label="Banking and Compliance"></a>
           <a class="hotspot nav-growth" href="#complete-support" aria-label="Market Entry and Growth"></a>

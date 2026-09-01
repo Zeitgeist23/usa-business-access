@@ -9,6 +9,13 @@
 
   const setOpen = (open) => {
     window.clearTimeout(closeTimer);
+    if (open) {
+      const companyToggle = document.querySelector('.company-menu-toggle');
+      const companyMenu = document.getElementById('company-mega-menu');
+      panel.classList.remove('company-menu-open');
+      if (companyToggle) { companyToggle.setAttribute('aria-expanded', 'false'); companyToggle.setAttribute('aria-label', 'Open Company & Entity Formation menu'); }
+      if (companyMenu) companyMenu.setAttribute('aria-hidden', 'true');
+    }
     panel.classList.toggle('services-menu-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close Services menu' : 'Open Services menu');
@@ -60,5 +67,6 @@
     }
   });
 
+  window.addEventListener('scroll', closeMenu, { passive: true });
   window.addEventListener('resize', closeMenu, { passive: true });
 })();
