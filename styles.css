@@ -459,33 +459,16 @@ a { color: inherit; }
   padding-top: 45px;
   padding-bottom: 37px;
 }
-.footer-wordmark {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  line-height: .93;
-  text-transform: uppercase;
+.footer-logo-image {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin: 0 0 20px;
+  border: 0;
+  user-select: none;
+  -webkit-user-drag: none;
 }
-.footer-usa {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: -4px;
-}
-.footer-usa span { color: #22b5e5; position: relative; }
-.footer-divider { width: 1px; height: 43px; background: rgb(255 255 255 / 58%); }
-.footer-business { font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: .04em; }
-.footer-business strong { color: #ff383e; font-size: 20px; }
-.footer-globe { color: #fff; font-size: 33px; line-height: 1; }
-.footer-brand > p {
-  margin: 12px 0 19px;
-  color: rgb(255 255 255 / 77%);
-  font-size: 11px;
-  line-height: 1.35;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
+
 .social-row { display: flex; gap: 10px; }
 .social-row a {
   display: grid;
