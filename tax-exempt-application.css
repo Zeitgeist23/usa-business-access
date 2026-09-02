@@ -1,6 +1,6 @@
 /* 501(c)(3) application page refinements */
 .tax-exempt-page .corp-hero-media{background:#fff}
-.tax-exempt-page .corp-hero-media::before{display:none}
+.tax-exempt-page .corp-hero-media::before{display:block;width:6.5%;background:linear-gradient(to right,#fff 0,rgba(255,255,255,.72) 28%,rgba(255,255,255,.28) 64%,rgba(255,255,255,0) 100%)}
 .tax-exempt-page .corp-hero-media img{object-fit:cover;object-position:right center;transform:none;background:#fff}
 .tax-exempt-page .corp-benefits{margin-top:-14px}
 .tax-exempt-page .corp-hero h1{font-size:clamp(41px,3.35vw,64px)}
