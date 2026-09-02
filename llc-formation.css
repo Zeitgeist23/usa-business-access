@@ -71,7 +71,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-why{position:absolute;z-index:3;left:4.7%;top:87.95%;width:43.9%;height:11.85%;overflow:hidden;color:#062a61}
 .sharp-why h2{position:absolute;left:7%;top:0;width:86%;height:14%;margin:0;display:grid;place-items:center;background:#fcfcfc;text-align:center;font-size:clamp(17px,1.25vw,24px);line-height:1;font-weight:800;text-transform:uppercase}
 .sharp-why article{position:absolute;width:39.5%;height:40%;padding:.1vw .45vw;background:#fcfcfc}
-.sharp-why .why-one{left:10.8%;top:18%}.sharp-why .why-two{left:60.2%;top:18%}.sharp-why .why-three{left:10.8%;top:58%}.sharp-why .why-four{left:60.2%;top:58%}
+.sharp-why .why-one{left:10.8%;top:18%}.sharp-why .why-two{left:61.5%;top:18%;width:38.2%}.sharp-why .why-three{left:10.8%;top:58%}.sharp-why .why-four{left:61.5%;top:58%;width:38.2%}
 .sharp-why h3{margin:0 0:.25vw;font-size:clamp(11px,.78vw,15px);line-height:1.15;font-weight:800;white-space:nowrap}
 .sharp-why p{margin:0;font-size:clamp(10px,.67vw,13px);line-height:1.35;font-weight:500}
 .sharp-faq{position:absolute;z-index:4;left:50.1%;top:88.05%;width:45.4%;height:11.7%;padding:0 1.4vw;background:#fff;color:#062a61}
