@@ -41,7 +41,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-benefits article:last-child{border-right:0}
 .sharp-benefits h3{margin:0 0:.55vw;font-size:clamp(17px,1.15vw,22px);line-height:1.14;font-weight:800;letter-spacing:0}
 .sharp-benefits p{margin:0;font-size:clamp(14px,.92vw,18px);line-height:1.34;font-weight:500;letter-spacing:0}
-.sharp-services-title{position:absolute;z-index:3;left:28%;top:43.05%;width:44%;height:2.6%;margin:0;display:grid;place-items:center;background:#fff;color:#062a61;text-align:center;font-size:clamp(19px,1.45vw,28px);line-height:1;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.sharp-services-title{position:absolute;z-index:3;left:26%;top:43.05%;width:48%;height:2.6%;margin:0;display:grid;place-items:center;background:#fff;color:#062a61;text-align:center;font-size:clamp(19px,1.45vw,28px);line-height:1;font-weight:800;text-transform:uppercase;white-space:nowrap}
 .sharp-services-title::before,.sharp-services-title::after{content:"";position:absolute;top:50%;width:11%;height:2px;background:#ed1c24;transform:translateY(-50%)}
 .sharp-services-title::before{left:0}.sharp-services-title::after{right:0}
 .sharp-services{position:absolute;z-index:2;left:2.7%;top:51.45%;width:94.6%;height:6.75%;display:grid;grid-template-columns:repeat(6,1fr);background:transparent;color:#062a61;text-align:center}
