@@ -26,7 +26,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .approved-body img{display:block;width:100%;height:auto}
 .body-hotspot{position:absolute;display:block;background:transparent}
 .body-hotspot:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-.start{left:4.8%;top:21.9%;width:12.3%;height:3.2%}
+.start{left:4.72%;top:21.9%;width:12.6%;height:3.2%}
 .consult{left:18.6%;top:21.9%;width:19.4%;height:3.2%}
 .start,.consult{z-index:5;display:flex;align-items:center;justify-content:center;border-radius:4px;text-decoration:none;text-transform:uppercase;font-size:clamp(12px,.9vw,17px);font-weight:800;line-height:1;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
 .start{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 4px 10px rgba(6,42,97,.18);color:#fff}
