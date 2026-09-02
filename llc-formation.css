@@ -26,10 +26,10 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .start{left:4.8%;top:21.9%;width:12.3%;height:3.2%}
 .consult{left:18.6%;top:21.9%;width:19.4%;height:3.2%}
 .start,.consult{z-index:5;display:flex;align-items:center;justify-content:center;border-radius:4px;text-decoration:none;text-transform:uppercase;font-size:clamp(12px,.9vw,17px);font-weight:800;line-height:1;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
-.start{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 3px 0 #ad0910,0 5px 11px rgba(142,0,8,.2);color:#fff}
-.consult{border:2px solid #102f83;background:linear-gradient(#fff,#f4f7fc);box-shadow:0 3px 0 rgba(16,47,131,.28),0 5px 11px rgba(6,42,97,.12);color:#102f83}
+.start{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 2px 0 #b60b12,0 3px 7px rgba(142,0,8,.14);color:#fff}
+.consult{border:2px solid #102f83;background:linear-gradient(#fff,#f7f9fd);box-shadow:0 2px 0 rgba(16,47,131,.2),0 3px 7px rgba(6,42,97,.09);color:#102f83}
 .start::after{content:"Start Your LLC"}.consult::after{content:"Schedule a Consultation"}
-.start:hover,.consult:hover,.start:focus-visible,.consult:focus-visible{transform:translateY(-2px);box-shadow:0 5px 0 rgba(8,37,96,.25),0 9px 16px rgba(6,42,97,.2)}
+.start:hover,.consult:hover,.start:focus-visible,.consult:focus-visible{transform:translateY(-1px);box-shadow:0 3px 0 rgba(8,37,96,.2),0 6px 11px rgba(6,42,97,.15)}
 .start:hover{background:linear-gradient(#ff2b33,#e20b13)}
 .consult:hover{background:linear-gradient(#fff,#eaf0fa)}
 .start:active,.consult:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(8,37,96,.25),0 3px 7px rgba(6,42,97,.15)}
@@ -83,9 +83,9 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .cta h2{margin:0;font-size:28px}
 .cta p{margin:4px 0 0}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 25px;border-radius:4px;color:#fff;font-weight:800;text-decoration:none;text-transform:uppercase;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
-.button.primary{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 3px 0 #a80a11,0 6px 13px rgba(0,17,55,.22)}
-.button.secondary{border:2px solid #fff;background:linear-gradient(rgba(255,255,255,.07),rgba(0,20,76,.08));box-shadow:0 3px 0 rgba(0,20,70,.32),0 6px 13px rgba(0,17,55,.2)}
-.button:hover,.button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 0 rgba(0,20,70,.3),0 10px 18px rgba(0,17,55,.26);outline:none}
+.button.primary{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 2px 0 #b60b12,0 4px 8px rgba(0,17,55,.16)}
+.button.secondary{border:2px solid #fff;background:linear-gradient(rgba(255,255,255,.06),rgba(0,20,76,.05));box-shadow:0 2px 0 rgba(0,20,70,.22),0 4px 8px rgba(0,17,55,.14)}
+.button:hover,.button:focus-visible{transform:translateY(-1px);box-shadow:0 3px 0 rgba(0,20,70,.22),0 7px 12px rgba(0,17,55,.2);outline:none}
 .button.primary:hover{background:linear-gradient(#ff2b33,#e20b13)}
 .button.secondary:hover{background:rgba(255,255,255,.14)}
 .button:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(0,20,70,.3),0 3px 7px rgba(0,17,55,.18)}
