@@ -1,0 +1,11 @@
+/* Animal rescue and welfare nonprofit page refinements */
+.animal-page .corp-hero-media{background:#fff}
+.animal-page .corp-hero-media::before{display:block;width:8%;background:linear-gradient(to right,#fff 0,rgba(255,255,255,.76) 20%,rgba(255,255,255,.3) 62%,rgba(255,255,255,0) 100%)}
+.animal-page .corp-hero-media img{object-fit:cover;object-position:center center;transform:none;background:#fff}
+.animal-page .corp-benefits{margin-top:-14px}
+.animal-page .corp-hero h1{font-size:clamp(41px,3.15vw,60px)}
+.animal-audiences .corp-founder-card{grid-template-columns:180px 1fr}
+@media(max-width:650px){
+  .animal-audiences .corp-founder-card{grid-template-columns:1fr}
+  .animal-page .corp-hero h1{font-size:40px}
+}
