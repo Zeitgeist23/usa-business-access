@@ -137,7 +137,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 
 /* Desktop LLC bottom panels aligned to the approved formation-page scale */
 @media(min-width:1051px){
-  .approved-body{overflow:visible;margin-bottom:calc(clamp(410px,25.5vw,485px) - 12.8vw + 62px)}
+  .approved-body{overflow:visible;margin-bottom:calc(clamp(410px,25.5vw,485px) - 12.8vw + 62px + var(--llc-faq-extra,0px))}
   .sharp-why,.sharp-faq{
     top:87.95%;
     height:clamp(410px,25.5vw,485px);
@@ -156,7 +156,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
     gap:24px;
     background:#fff
   }
-  .sharp-faq{left:50.7%;width:45.7%;background:#fff}
+  .sharp-faq{left:50.7%;width:45.7%;height:calc(clamp(410px,25.5vw,485px) + var(--llc-faq-extra,0px));background:#f1f9fb}
   .sharp-why h2,.sharp-faq h2{
     position:static;
     width:auto;

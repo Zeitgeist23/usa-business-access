@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>U.S. LLC Formation | USA Business Access</title>
   <meta name="description" content="USA Business Access LLC formation support for U.S. and international founders.">
-  <link rel="stylesheet" href="/llc-formation.css?v=20260902w">
+  <link rel="stylesheet" href="/llc-formation.css?v=20260902x">
 </head>
 <body>
   <header class="site-header">
@@ -139,12 +139,22 @@
   </footer>
   <script>
     const llcFaqItems=[...document.querySelectorAll('.sharp-faq details')];
+    const llcFaq=document.querySelector('.sharp-faq');
+    const syncLlcFaqHeight=()=>{
+      const openAnswer=llcFaq?.querySelector('details[open] p');
+      const extra=openAnswer&&window.matchMedia('(min-width:1051px)').matches
+        ? Math.ceil(openAnswer.getBoundingClientRect().height+6)
+        : 0;
+      document.documentElement.style.setProperty('--llc-faq-extra',`${extra}px`);
+    };
     llcFaqItems.forEach((item)=>{
       item.addEventListener('toggle',()=>{
-        if(!item.open)return;
-        llcFaqItems.forEach((other)=>{if(other!==item)other.open=false});
+        if(item.open)llcFaqItems.forEach((other)=>{if(other!==item)other.open=false});
+        requestAnimationFrame(syncLlcFaqHeight);
       });
     });
+    window.addEventListener('resize',syncLlcFaqHeight,{passive:true});
+    syncLlcFaqHeight();
   </script>
 </body>
 </html>
