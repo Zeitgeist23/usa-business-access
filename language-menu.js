@@ -38,8 +38,8 @@
     .usaba-language-list a { display:block; padding:10px 12px; border-radius:7px; color:#082c67; font-size:14px; font-weight:700; text-decoration:none; }
     .usaba-language-list a:hover,.usaba-language-list a:focus-visible { background:#e9faff; color:#047da4; outline:none; }
     .usaba-language-list a[aria-current="page"] { background:#082c67; color:#fff; }
-    .image-hotspots .usaba-language { position:absolute; left:84.1%; top:1.65%; z-index:30; }
-    .image-hotspots .usaba-language-button { width:5.2vw; min-width:64px; max-width:74px; min-height:0; height:5.9vw; max-height:58px; padding:0 .3vw; border-radius:.5vw; background:rgba(255,255,255,.96); }
+    .image-hotspots .usaba-language { position:absolute; left:84.9%; top:2.2%; z-index:30; }
+    .image-hotspots .usaba-language-button { width:5.2vw; min-width:64px; max-width:74px; min-height:0; height:4.5vw; max-height:44px; padding:0 .3vw; border-radius:.5vw; background:rgba(255,255,255,.96); }
     @media(max-width:980px){ .site-header .usaba-language-button{padding:0 9px}.site-header .usaba-language-button .language-word{display:none} }
     @media(max-width:733px){ .image-hotspots .usaba-language{position:fixed;left:auto;right:16px;top:16px}.image-hotspots .usaba-language-button{height:44px;max-height:none;padding:0 12px;border-radius:7px} }
   `;
