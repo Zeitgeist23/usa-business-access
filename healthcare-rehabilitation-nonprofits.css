@@ -1,0 +1,14 @@
+/* Healthcare and rehabilitation nonprofit page refinements */
+.healthcare-page .corp-hero-media{background:#fff}
+.healthcare-page .corp-hero-media::before{display:block;width:8%;background:linear-gradient(to right,#fff 0,rgba(255,255,255,.76) 20%,rgba(255,255,255,.3) 62%,rgba(255,255,255,0) 100%)}
+.healthcare-page .corp-hero-media img{object-fit:cover;object-position:center center;transform:none;background:#fff}
+.healthcare-page .corp-benefits{margin-top:-14px}
+.healthcare-page .corp-hero h1{font-size:clamp(41px,3.15vw,60px)}
+.healthcare-page .corp-actions{flex-wrap:wrap}
+.healthcare-page .corp-actions .corp-button.primary{width:300px;font-size:16px}
+.healthcare-audiences .corp-founder-card{grid-template-columns:180px 1fr}
+@media(max-width:650px){
+  .healthcare-audiences .corp-founder-card{grid-template-columns:1fr}
+  .healthcare-page .corp-hero h1{font-size:40px}
+  .healthcare-page .corp-actions .corp-button.primary{width:100%}
+}
