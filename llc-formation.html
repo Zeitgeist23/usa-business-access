@@ -116,11 +116,11 @@
       </section>
       <section class="sharp-faq" id="faq" aria-labelledby="faq-title">
         <h2 id="faq-title">Frequently Asked Questions</h2>
-        <details><summary>What is an LLC?</summary><p>An LLC is a limited liability company that separates business obligations from its owners' personal assets.</p></details>
-        <details><summary>Which state should I form my LLC in?</summary><p>The right state depends on where you operate, your ownership, and your business goals.</p></details>
-        <details><summary>Does USAB provide legal or tax advice directly?</summary><p>USABA coordinates with independent legal and tax professionals when specialized advice is needed.</p></details>
-        <details><summary>How long does LLC formation take?</summary><p>Timing varies by state and filing method. We explain the expected timeline before filing.</p></details>
-        <details><summary>Can a non-U.S. person own an LLC?</summary><p>Yes. A non-U.S. person can generally own a U.S. LLC, subject to applicable tax, banking, and compliance requirements.</p></details>
+        <details name="llc-faq"><summary>What is an LLC?</summary><p>An LLC is a limited liability company that separates business obligations from its owners' personal assets.</p></details>
+        <details name="llc-faq"><summary>Which state should I form my LLC in?</summary><p>The right state depends on where you operate, your ownership, and your business goals.</p></details>
+        <details name="llc-faq"><summary>Does USAB provide legal or tax advice directly?</summary><p>USABA coordinates with independent legal and tax professionals when specialized advice is needed.</p></details>
+        <details name="llc-faq"><summary>How long does LLC formation take?</summary><p>Timing varies by state and filing method. We explain the expected timeline before filing.</p></details>
+        <details name="llc-faq"><summary>Can a non-U.S. person own an LLC?</summary><p>Yes. A non-U.S. person can generally own a U.S. LLC, subject to applicable tax, banking, and compliance requirements.</p></details>
       </section>
     </section>
   </main>
@@ -137,5 +137,14 @@
     <nav><h3>About Us</h3><a href="/#complete-support">About USABA</a><a href="/#complete-support">Why USABA</a><a href="/#complete-support">Partners</a><a href="/#contact">Careers</a><a href="/#contact">Contact</a></nav>
     <div class="legal"><p>Disclaimer: USA Business Access (USABA) is a business consulting and referral service. We are not a law firm, CPA firm, or registered investment advisor. We do not provide legal, tax, or financial advice. We work with independent professionals and financial institutions, including banks and payment processors, to support your business needs.</p><p>© 2024 USA Business Access. All rights reserved.<br><a href="/#contact">Privacy Policy</a> &nbsp;|&nbsp; <a href="/#contact">Terms of Service</a></p></div>
   </footer>
+  <script>
+    const llcFaqItems=[...document.querySelectorAll('.sharp-faq details')];
+    llcFaqItems.forEach((item)=>{
+      item.addEventListener('toggle',()=>{
+        if(!item.open)return;
+        llcFaqItems.forEach((other)=>{if(other!==item)other.open=false});
+      });
+    });
+  </script>
 </body>
 </html>

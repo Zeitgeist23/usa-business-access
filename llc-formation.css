@@ -190,3 +190,12 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
   .sharp-faq details p{position:static;margin:0;padding:0 16px 15px;border:0;background:#fff;font-size:15px;line-height:1.5;box-shadow:none}
   .sharp-faq details:last-of-type p{position:static;border-radius:0;box-shadow:none}
 }
+
+
+/* LLC FAQ accordion correction */
+.sharp-faq summary{position:relative}
+@media(min-width:1051px){
+  .sharp-faq{overflow:visible}
+  .sharp-faq details[open]{z-index:6}
+  .sharp-faq details[open] summary{border-bottom:1px solid #e3e7ee}
+}
