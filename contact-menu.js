@@ -4,7 +4,27 @@
   const EMAIL = "contact@usabusinessaccess.com";
   const PHONE_DISPLAY = "+1 (312) 515-3372";
   const PHONE_HREF = "+13125153372";
-  const triggers = Array.from(document.querySelectorAll(".site-header .contact, .nav-contact"));
+  const LANG = document.documentElement.lang.toLowerCase();
+  const COPY = LANG.startsWith("es") ? {
+    title: "Contactar a USA Business Access",
+    email: "Enviar correo a USABA",
+    call: "Llamar a USABA",
+    label: "Opciones de contacto de USA Business Access",
+    subject: "Consulta%20de%20USA%20Business%20Access"
+  } : LANG.startsWith("pt") ? {
+    title: "Contatar a USA Business Access",
+    email: "Enviar e-mail para a USABA",
+    call: "Ligar para a USABA",
+    label: "Opções de contato da USA Business Access",
+    subject: "Consulta%20USA%20Business%20Access"
+  } : {
+    title: "Contact USA Business Access",
+    email: "Email USABA",
+    call: "Call USABA",
+    label: "Contact USA Business Access",
+    subject: "USA%20Business%20Access%20Inquiry"
+  };
+  const triggers = Array.from(document.querySelectorAll(".site-header .contact, .localized-header .contact, .nav-contact"));
 
   if (!triggers.length) return;
 
@@ -104,18 +124,18 @@
   menu.id = "usaba-direct-contact-menu";
   menu.className = "usaba-contact-menu";
   menu.setAttribute("role", "menu");
-  menu.setAttribute("aria-label", "Contact USA Business Access");
+  menu.setAttribute("aria-label", COPY.label);
   menu.setAttribute("aria-hidden", "true");
   menu.innerHTML = `
-    <div class="usaba-contact-menu-title">Contact USA Business Access</div>
-    <a class="usaba-contact-option" role="menuitem" href="mailto:${EMAIL}?subject=USA%20Business%20Access%20Inquiry">
+    <div class="usaba-contact-menu-title">${COPY.title}</div>
+    <a class="usaba-contact-option" role="menuitem" href="mailto:${EMAIL}?subject=${COPY.subject}">
       <span class="usaba-contact-icon" aria-hidden="true">@</span>
-      <span class="usaba-contact-copy"><strong>Email USABA</strong><span>${EMAIL}</span></span>
+      <span class="usaba-contact-copy"><strong>${COPY.email}</strong><span>${EMAIL}</span></span>
       <span class="usaba-contact-arrow" aria-hidden="true">→</span>
     </a>
     <a class="usaba-contact-option" role="menuitem" href="tel:${PHONE_HREF}">
       <span class="usaba-contact-icon" aria-hidden="true">☎</span>
-      <span class="usaba-contact-copy"><strong>Call USABA</strong><span>${PHONE_DISPLAY}</span></span>
+      <span class="usaba-contact-copy"><strong>${COPY.call}</strong><span>${PHONE_DISPLAY}</span></span>
       <span class="usaba-contact-arrow" aria-hidden="true">→</span>
     </a>
   `;
