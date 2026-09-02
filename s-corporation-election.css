@@ -1,0 +1,71 @@
+:root{--corp-navy:#062a61;--corp-blue:#102f83;--corp-red:#e31920;--corp-cyan:#20c4e8;--corp-pale:#f3f7fc;--corp-line:#d8e2ef}
+.corp-page{color:var(--corp-navy);background:#fff}
+.corp-hero{position:relative;display:grid;grid-template-columns:47% 53%;height:555px;overflow:hidden;background:#fff}
+.corp-hero-copy{z-index:2;display:flex;flex-direction:column;justify-content:center;padding:32px 4.4vw 48px}
+.corp-kicker{display:flex;align-items:center;gap:14px;margin:0 0 18px;color:var(--corp-navy);font-size:18px;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.corp-kicker::before{content:"";width:36px;height:3px;background:var(--corp-red)}
+.corp-hero h1{max-width:720px;margin:0;color:var(--corp-navy);font-size:clamp(43px,3.6vw,68px);line-height:1.08;letter-spacing:-.025em}
+.corp-hero-copy>p{max-width:620px;margin:18px 0 22px;font-size:clamp(18px,1.2vw,21px);line-height:1.45}
+.corp-actions{display:flex;flex-wrap:nowrap;gap:22px}
+.corp-actions .corp-button{box-sizing:border-box;flex:0 0 auto;height:49px;min-height:49px;padding:0 18px;white-space:nowrap}
+@media(min-width:651px){.corp-actions .corp-button.primary{width:189px}.corp-actions .corp-button.secondary{width:296px}}
+.corp-button{display:inline-flex;min-height:60px;align-items:center;justify-content:center;padding:14px 26px;border-radius:5px;font-size:17px;font-weight:800;text-decoration:none;text-transform:uppercase;transition:transform .17s ease,box-shadow .17s ease,background .17s ease}
+.corp-button.primary{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);color:#fff;box-shadow:0 4px 10px rgba(6,42,97,.18)}
+.corp-button.secondary{border:2px solid var(--corp-blue);background:#fff;color:var(--corp-blue);box-shadow:0 3px 8px rgba(6,42,97,.1)}
+.corp-button:hover,.corp-button:focus-visible{transform:translateY(-2px);box-shadow:0 8px 18px rgba(6,42,97,.2);outline:none}
+.corp-hero-media{position:relative;min-width:0;height:555px;overflow:hidden;background:#eee}
+.corp-hero-media::before{content:"";position:absolute;z-index:1;inset:0 auto 0 0;width:9%;background:linear-gradient(to right,#fff,rgba(255,255,255,.7) 38%,rgba(255,255,255,0))}
+.corp-hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.corp-hero-first{opacity:1}
+.corp-hero-second{opacity:0;animation:corpHeroFade 24s ease-in-out infinite}
+@keyframes corpHeroFade{0%,37.5%{opacity:0}50%,87.5%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.corp-hero-second{animation:none;opacity:0}}
+.corp-benefits{position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);width:92%;margin:-28px auto 55px;border-radius:12px;background:rgba(255,255,255,.98);box-shadow:0 7px 24px rgba(6,42,97,.14);overflow:hidden}
+.corp-benefits article{min-height:238px;padding:28px 22px;text-align:center}
+.corp-benefits article+article{border-left:1px solid var(--corp-line)}
+.corp-icon{display:flex;width:72px;height:72px;align-items:center;justify-content:center;margin:0 auto 15px;border:2px solid var(--corp-blue);border-radius:50%;color:var(--corp-blue);font-size:23px;font-weight:800;letter-spacing:.03em}
+.corp-benefits .corp-icon{width:82px;height:82px;border:0;border-radius:0}
+.corp-benefits .corp-icon svg{display:block;width:64px;height:64px;fill:none;stroke:var(--corp-blue);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.corp-benefits h2{margin:0 0 14px;font-size:23px;line-height:1.12}
+.corp-benefits p{margin:0;font-size:16px;line-height:1.45}
+.corp-section{width:92%;margin:0 auto 38px}
+.corp-title{display:flex;align-items:center;justify-content:center;gap:24px;margin:0 0 28px;color:var(--corp-navy);font-size:clamp(28px,2.1vw,40px);text-align:center;text-transform:uppercase}
+.corp-title::before,.corp-title::after{content:"";width:90px;height:3px;background:var(--corp-red)}
+.corp-services{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--corp-line);border-radius:12px;background:#fff;box-shadow:0 5px 18px rgba(6,42,97,.08);overflow:hidden}
+.corp-services article{min-height:230px;padding:30px 25px;text-align:center}
+.corp-services article:nth-child(n+4){border-top:1px solid var(--corp-line)}
+.corp-services article:not(:nth-child(3n+1)){border-left:1px solid var(--corp-line)}
+.corp-services .corp-icon{border:0;border-radius:0}
+.corp-services .corp-service-icon svg{display:block;width:58px;height:58px;fill:none;stroke:var(--corp-blue);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.corp-services h3{margin:0 0 12px;font-size:22px;line-height:1.15}
+.corp-services p{max-width:320px;margin:0 auto;font-size:16px;line-height:1.5}
+.corp-founders{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:92%;margin:0 auto 24px}
+.corp-founder-card{display:grid;grid-template-columns:180px 1fr;align-items:center;min-height:250px;padding:22px 30px;border:1px solid #cfdcec;border-radius:12px;background:var(--corp-pale);box-shadow:0 5px 14px rgba(6,42,97,.08);transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.corp-founder-card:hover{transform:translateY(-4px);border-color:#b9cbe2;background:#eef3f8;box-shadow:0 10px 22px rgba(6,42,97,.16)}
+@media(prefers-reduced-motion:reduce){.corp-founder-card{transition:none}}
+.corp-founder-card img{justify-self:center;align-self:center;width:88%;height:auto;object-fit:contain;transform:translateY(-10%)}
+.corp-founder-card:nth-child(2) img{width:112%;transform:translateY(4%)}
+.corp-founder-card h2{margin:0 0 12px;font-size:29px}
+.corp-founder-card p{margin:0 0 13px;font-size:17px}
+.corp-founder-card ul{margin:0;padding:0;list-style:none;font-size:16px;line-height:1.45}
+.corp-founder-card li::before{content:"✓";margin-right:9px;color:#084fc5;font-weight:800}
+.corp-process{padding:28px 4vw 48px;background:#fff}
+.corp-process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;max-width:1600px;margin:auto}
+.corp-step{text-align:center}
+.corp-step-number{display:flex;width:68px;height:68px;align-items:center;justify-content:center;margin:0 auto 14px;border:2px solid var(--corp-blue);border-radius:50%;background:#fff;color:var(--corp-red);font-size:22px;font-weight:800;box-shadow:0 0 0 8px #fff}
+.corp-step h3{margin:0 0 9px;font-size:18px}
+.corp-step p{margin:0;font-size:15px;line-height:1.45}
+.corp-bottom{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:92%;margin:0 auto 62px}
+.corp-why,.corp-faq{padding:30px;border:1px solid var(--corp-line);border-radius:12px;background:#fff;box-shadow:0 5px 16px rgba(6,42,97,.08)}
+.corp-bottom h2{margin:0 0 22px;font-size:27px;text-align:center;text-transform:uppercase}
+.corp-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.corp-why h3{margin:0 0 7px;font-size:18px}
+.corp-why p{margin:0;font-size:15px;line-height:1.45}
+.corp-faq details{border:1px solid var(--corp-line);border-radius:5px;background:#fff}
+.corp-faq details+details{margin-top:6px}
+.corp-faq summary{padding:13px 16px;font-size:16px;font-weight:800;cursor:pointer}
+.corp-faq details p{margin:0;padding:0 16px 15px;font-size:15px;line-height:1.5}
+.corp-cta{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:24px;padding:38px 6vw;background:linear-gradient(100deg,#0752a7,#087dcc);color:#fff}
+.corp-cta h2{margin:0 0 7px;font-size:30px}.corp-cta p{margin:0;font-size:17px}
+@media(max-width:1050px){.corp-hero{grid-template-columns:1fr;height:auto}.corp-hero-copy{padding:50px 6vw 45px}.corp-hero-media{height:460px}.corp-benefits{grid-template-columns:1fr 1fr;margin-top:-35px}.corp-benefits article:nth-child(3){border-left:0}.corp-benefits article:nth-child(n+3){border-top:1px solid var(--corp-line)}.corp-founders{grid-template-columns:1fr}.corp-process-grid{grid-template-columns:repeat(2,1fr)}.corp-step:last-child{grid-column:1/-1}.corp-bottom{grid-template-columns:1fr}.corp-cta{grid-template-columns:1fr}.corp-cta .corp-button{width:max-content}}
+@media(max-width:650px){.corp-hero h1{font-size:42px}.corp-hero-media{height:330px}.corp-benefits,.corp-services{grid-template-columns:1fr}.corp-benefits article+article,.corp-benefits article:nth-child(3),.corp-services article:not(:nth-child(3n+1)),.corp-services article:nth-child(n+4){border-left:0;border-top:1px solid var(--corp-line)}.corp-title::before,.corp-title::after{width:28px}.corp-founder-card{grid-template-columns:1fr;text-align:center}.corp-founder-card img{margin:auto}.corp-founder-card li{text-align:left}.corp-process-grid{grid-template-columns:1fr}.corp-step:last-child{grid-column:auto}.corp-why-grid{grid-template-columns:1fr}.corp-actions{gap:14px}.corp-button{width:100%}}
