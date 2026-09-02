@@ -29,13 +29,13 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .start{left:4.8%;top:21.9%;width:12.3%;height:3.2%}
 .consult{left:18.6%;top:21.9%;width:19.4%;height:3.2%}
 .start,.consult{z-index:5;display:flex;align-items:center;justify-content:center;border-radius:4px;text-decoration:none;text-transform:uppercase;font-size:clamp(12px,.9vw,17px);font-weight:800;line-height:1;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}
-.start{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 2px 0 #b60b12,0 3px 7px rgba(142,0,8,.14);color:#fff}
+.start{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);box-shadow:0 4px 10px rgba(6,42,97,.18);color:#fff}
 .consult{border:2px solid #102f83;background:linear-gradient(#fff,#f7f9fd);box-shadow:0 2px 0 rgba(16,47,131,.2),0 3px 7px rgba(6,42,97,.09);color:#102f83}
 .start::after{content:"Start Your LLC"}.consult::after{content:"Schedule a Consultation"}
-.start:hover,.consult:hover,.start:focus-visible,.consult:focus-visible{transform:translateY(-1px);box-shadow:0 3px 0 rgba(8,37,96,.2),0 6px 11px rgba(6,42,97,.15)}
+.start:hover,.consult:hover,.start:focus-visible,.consult:focus-visible{transform:translateY(-1px);box-shadow:0 7px 14px rgba(6,42,97,.2)}
 .start:hover{background:linear-gradient(#ff2b33,#e20b13)}
 .consult:hover{background:linear-gradient(#fff,#eaf0fa)}
-.start:active,.consult:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(8,37,96,.25),0 3px 7px rgba(6,42,97,.15)}
+.start:active,.consult:active{transform:translateY(1px);box-shadow:0 2px 6px rgba(6,42,97,.16)}
 .faq1,.faq2,.faq3,.faq4,.faq5{left:51.7%;width:41.5%;height:1.55%}
 .faq1{top:86.9%}.faq2{top:88.6%}.faq3{top:90.3%}.faq4{top:92%}.faq5{top:93.7%}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
