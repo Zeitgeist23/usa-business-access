@@ -91,3 +91,6 @@
 .corp-hero-media::before{display:none}
 .corp-hero-media img{object-fit:contain;object-position:center center;background:#fff}
 .corp-benefits{margin-top:-14px}
+
+/* Tighten the civic-building slide's built-in white transition */
+.corp-hero-first{transform:scale(1.08);transform-origin:right center}
