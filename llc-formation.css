@@ -85,6 +85,9 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-faq summary::after{content:"⌄";position:absolute;right:.8vw;top:50%;transform:translateY(-55%);font-size:1.1em;font-weight:900}
 .sharp-faq details[open] summary::after{content:"⌃"}
 .sharp-faq details p{position:absolute;z-index:5;left:0;right:0;top:100%;margin:0;padding:.55vw .8vw;border:1px solid #d9dee7;border-radius:0 0 4px 4px;background:#fff;font-size:clamp(12px,.72vw,14px);line-height:1.35;box-shadow:0 5px 12px rgba(6,42,97,.12)}
+.sharp-faq details:last-of-type[open]{z-index:10}
+.sharp-faq details:last-of-type p{top:auto;bottom:100%;border-radius:4px 4px 0 0;box-shadow:0 -5px 12px rgba(6,42,97,.12)}
+.sharp-faq summary:focus-visible{outline:2px solid #102f83;outline-offset:-2px}
 .cta{display:flex;align-items:center;gap:28px;padding:18px 5vw;color:#fff;background:linear-gradient(105deg,#073d8e,#0056b7)}
 .cta div{margin-right:auto}
 .cta h2{margin:0;font-size:28px}
