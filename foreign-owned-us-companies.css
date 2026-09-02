@@ -43,8 +43,8 @@
 .corp-founder-card{display:grid;grid-template-columns:180px 1fr;align-items:center;min-height:250px;padding:22px 30px;border:1px solid #cfdcec;border-radius:12px;background:var(--corp-pale);box-shadow:0 5px 14px rgba(6,42,97,.08);transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
 .corp-founder-card:hover{transform:translateY(-4px);border-color:#b9cbe2;background:#eef3f8;box-shadow:0 10px 22px rgba(6,42,97,.16)}
 @media(prefers-reduced-motion:reduce){.corp-founder-card{transition:none}}
-.corp-founder-card img{justify-self:center;align-self:center;width:180px;max-width:100%;height:180px;object-fit:contain}
-.corp-founder-card:nth-child(2) img{width:165px;height:165px}
+.corp-founder-card img{justify-self:center;align-self:center;width:170px;max-width:100%;height:170px;object-fit:contain;transform:translateY(16px)}
+.corp-founder-card:nth-child(2) img{width:170px;height:170px;transform:translateY(-16px)}
 .corp-founder-card h2{margin:0 0 12px;font-size:29px}
 .corp-founder-card p{margin:0 0 13px;font-size:17px}
 .corp-founder-card ul{margin:0;padding:0;list-style:none;font-size:16px;line-height:1.45}
