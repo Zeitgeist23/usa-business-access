@@ -3,8 +3,20 @@
 
   const path = window.location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
   const routes = {
-    "/": { en: "/", es: "/es/", pt: "/pt/" },
+    "/": { en: "/", es: "/es", pt: "/pt" },
     "/llc-formation": { en: "/llc-formation", es: "/es/formacion-llc", pt: "/pt/formacao-llc" },
+    "/c-corporation-formation": { en: "/c-corporation-formation", es: "/es/formacion-corporacion-c", pt: "/pt/formacao-corporacao-c" },
+    "/s-corporation-election": { en: "/s-corporation-election", es: "/es/eleccion-corporacion-s", pt: "/pt/eleicao-corporacao-s" },
+    "/partnership-formation": { en: "/partnership-formation", es: "/es/formacion-sociedad", pt: "/pt/formacao-sociedade" },
+    "/professional-entities": { en: "/professional-entities", es: "/es/entidades-profesionales", pt: "/pt/entidades-profissionais" },
+    "/es/formacion-corporacion-c": { en: "/c-corporation-formation", es: "/es/formacion-corporacion-c", pt: "/pt/formacao-corporacao-c" },
+    "/pt/formacao-corporacao-c": { en: "/c-corporation-formation", es: "/es/formacion-corporacion-c", pt: "/pt/formacao-corporacao-c" },
+    "/es/eleccion-corporacion-s": { en: "/s-corporation-election", es: "/es/eleccion-corporacion-s", pt: "/pt/eleicao-corporacao-s" },
+    "/pt/eleicao-corporacao-s": { en: "/s-corporation-election", es: "/es/eleccion-corporacion-s", pt: "/pt/eleicao-corporacao-s" },
+    "/es/formacion-sociedad": { en: "/partnership-formation", es: "/es/formacion-sociedad", pt: "/pt/formacao-sociedade" },
+    "/pt/formacao-sociedade": { en: "/partnership-formation", es: "/es/formacion-sociedad", pt: "/pt/formacao-sociedade" },
+    "/es/entidades-profesionales": { en: "/professional-entities", es: "/es/entidades-profesionales", pt: "/pt/entidades-profissionais" },
+    "/pt/entidades-profissionais": { en: "/professional-entities", es: "/es/entidades-profesionales", pt: "/pt/entidades-profissionais" },
     "/foreign-owned-us-companies": { en: "/foreign-owned-us-companies", es: "/es/empresas-estadounidenses", pt: "/pt/empresas-americanas" },
     "/banking-compliance": { en: "/banking-compliance", es: "/es/banca-cumplimiento", pt: "/pt/servicos-bancarios-conformidade" },
     "/buy-us-business": { en: "/buy-us-business", es: "/es/comprar-negocio-estados-unidos", pt: "/pt/comprar-empresa-nos-estados-unidos" },
