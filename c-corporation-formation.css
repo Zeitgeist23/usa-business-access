@@ -6,7 +6,7 @@
 .corp-kicker::before{content:"";width:36px;height:3px;background:var(--corp-red)}
 .corp-hero h1{max-width:720px;margin:0;color:var(--corp-navy);font-size:clamp(43px,3.6vw,68px);line-height:1.08;letter-spacing:-.025em}
 .corp-hero-copy>p{max-width:620px;margin:18px 0 22px;font-size:clamp(18px,1.2vw,21px);line-height:1.45}
-.corp-actions{display:flex;flex-wrap:wrap;gap:26px}
+.corp-actions{display:flex;flex-wrap:nowrap;gap:18px}\n.corp-actions .corp-button{flex:0 0 auto;white-space:nowrap}
 .corp-button{display:inline-flex;min-height:60px;align-items:center;justify-content:center;padding:14px 26px;border-radius:5px;font-size:17px;font-weight:800;text-decoration:none;text-transform:uppercase;transition:transform .17s ease,box-shadow .17s ease,background .17s ease}
 .corp-button.primary{border:1px solid #c70d15;background:linear-gradient(#f32129,#dc0d15);color:#fff;box-shadow:0 4px 10px rgba(6,42,97,.18)}
 .corp-button.secondary{border:2px solid var(--corp-blue);background:#fff;color:var(--corp-blue);box-shadow:0 3px 8px rgba(6,42,97,.1)}
