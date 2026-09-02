@@ -150,6 +150,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
   .sharp-why{
     left:3.6%;
     width:45.4%;
+    height:calc(clamp(410px,25.5vw,485px) + var(--llc-faq-extra,0px));
     display:grid;
     grid-template-columns:1fr 1fr;
     grid-template-rows:auto 1fr 1fr;
