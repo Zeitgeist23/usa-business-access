@@ -13,7 +13,7 @@
 .corp-button:hover,.corp-button:focus-visible{transform:translateY(-2px);box-shadow:0 8px 18px rgba(6,42,97,.2);outline:none}
 .corp-hero-media{position:relative;min-width:0;height:555px;overflow:hidden;background:#eee}
 .corp-hero-media::before{content:"";position:absolute;z-index:1;inset:0 auto 0 0;width:9%;background:linear-gradient(to right,#fff,rgba(255,255,255,.7) 38%,rgba(255,255,255,0))}
-.corp-hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.corp-hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block}\n.corp-hero-first{opacity:1}\n.corp-hero-second{opacity:0;animation:corpHeroFade 24s ease-in-out infinite}\n@keyframes corpHeroFade{0%,37.5%{opacity:0}50%,87.5%{opacity:1}100%{opacity:0}}\n@media(prefers-reduced-motion:reduce){.corp-hero-second{animation:none;opacity:0}}
 .corp-benefits{position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);width:92%;margin:-76px auto 55px;border-radius:12px;background:rgba(255,255,255,.98);box-shadow:0 7px 24px rgba(6,42,97,.14);overflow:hidden}
 .corp-benefits article{min-height:238px;padding:28px 22px;text-align:center}
 .corp-benefits article+article{border-left:1px solid var(--corp-line)}
