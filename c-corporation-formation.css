@@ -35,7 +35,8 @@
 .corp-services article{min-height:230px;padding:30px 25px;text-align:center}
 .corp-services article:nth-child(n+4){border-top:1px solid var(--corp-line)}
 .corp-services article:not(:nth-child(3n+1)){border-left:1px solid var(--corp-line)}
-.corp-services .corp-icon{border:0;border-radius:0}\n.corp-services .corp-service-icon svg{display:block;width:58px;height:58px;fill:none;stroke:var(--corp-blue);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+.corp-services .corp-icon{border:0;border-radius:0}
+.corp-services .corp-service-icon svg{display:block;width:58px;height:58px;fill:none;stroke:var(--corp-blue);stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
 .corp-services h3{margin:0 0 12px;font-size:22px;line-height:1.15}
 .corp-services p{max-width:320px;margin:0 auto;font-size:16px;line-height:1.5}
 .corp-founders{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:92%;margin:0 auto 24px}
