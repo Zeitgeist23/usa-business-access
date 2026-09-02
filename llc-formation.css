@@ -134,3 +134,59 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .hero-crossfade-second{animation:heroChecklistFade 24s ease-in-out infinite}
 @keyframes heroChecklistFade{0%,37.5%{opacity:0}50%,87.5%{opacity:1}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.hero-crossfade-slide,.hero-crossfade::before,.hero-crossfade::after{animation:none;opacity:0}}
+
+/* Desktop LLC bottom panels aligned to the approved formation-page scale */
+@media(min-width:1051px){
+  .approved-body{overflow:visible;margin-bottom:calc(clamp(410px,25.5vw,485px) - 12.8vw + 62px)}
+  .sharp-why,.sharp-faq{
+    top:87.95%;
+    height:clamp(410px,25.5vw,485px);
+    padding:30px;
+    border:1px solid #d8e2ef;
+    border-radius:12px;
+    box-shadow:0 5px 16px rgba(6,42,97,.08);
+    overflow:hidden
+  }
+  .sharp-why{
+    left:3.6%;
+    width:45.4%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto 1fr 1fr;
+    gap:24px;
+    background:#fff
+  }
+  .sharp-faq{left:50.7%;width:45.7%;background:#fff}
+  .sharp-why h2,.sharp-faq h2{
+    position:static;
+    width:auto;
+    height:auto;
+    margin:0 0 22px;
+    display:block;
+    background:transparent;
+    font-size:27px;
+    line-height:1.15;
+    text-align:center;
+    text-transform:uppercase
+  }
+  .sharp-why h2{grid-column:1/-1;margin-bottom:4px}
+  .sharp-why article,
+  .sharp-why .why-one,
+  .sharp-why .why-two,
+  .sharp-why .why-three,
+  .sharp-why .why-four{
+    position:static;
+    width:auto;
+    height:auto;
+    padding:0;
+    background:transparent
+  }
+  .sharp-why h3{margin:0 0 7px;font-size:18px;line-height:1.2;white-space:normal}
+  .sharp-why p{margin:0;font-size:15px;line-height:1.45}
+  .sharp-faq details{position:relative;margin:0;border:1px solid #d8e2ef;border-radius:5px;background:#fff}
+  .sharp-faq details+details{margin-top:6px}
+  .sharp-faq summary{min-height:0;padding:13px 40px 13px 16px;font-size:16px;line-height:1.2}
+  .sharp-faq summary::after{right:16px}
+  .sharp-faq details p{position:static;margin:0;padding:0 16px 15px;border:0;background:#fff;font-size:15px;line-height:1.5;box-shadow:none}
+  .sharp-faq details:last-of-type p{position:static;border-radius:0;box-shadow:none}
+}
