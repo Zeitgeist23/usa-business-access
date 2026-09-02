@@ -1,0 +1,11 @@
+/* Charitable and foundation structure page refinements */
+.foundation-page .corp-hero-media{background:#fff}
+.foundation-page .corp-hero-media::before{display:block;width:5%;background:linear-gradient(to right,#fff,rgba(255,255,255,.55) 35%,rgba(255,255,255,0))}
+.foundation-page .corp-hero-media img{object-fit:cover;object-position:center center;transform:none;background:#fff}
+.foundation-page .corp-benefits{margin-top:-14px}
+.foundation-page .corp-hero h1{font-size:clamp(41px,3.25vw,62px)}
+.foundation-audiences .corp-founder-card{grid-template-columns:180px 1fr}
+@media(max-width:650px){
+  .foundation-audiences .corp-founder-card{grid-template-columns:1fr}
+  .foundation-page .corp-hero h1{font-size:40px}
+}
