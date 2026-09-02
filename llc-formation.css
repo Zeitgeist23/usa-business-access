@@ -41,7 +41,9 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .sharp-benefits article:last-child{border-right:0}
 .sharp-benefits h3{margin:0 0:.55vw;font-size:clamp(17px,1.15vw,22px);line-height:1.14;font-weight:800;letter-spacing:0}
 .sharp-benefits p{margin:0;font-size:clamp(14px,.92vw,18px);line-height:1.34;font-weight:500;letter-spacing:0}
-.sharp-services-title{position:absolute;z-index:3;left:35.5%;top:43.05%;width:29%;height:2.6%;margin:0;display:grid;place-items:center;background:#fff;color:#062a61;text-align:center;font-size:clamp(19px,1.45vw,28px);line-height:1;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.sharp-services-title{position:absolute;z-index:3;left:28%;top:43.05%;width:44%;height:2.6%;margin:0;display:grid;place-items:center;background:#fff;color:#062a61;text-align:center;font-size:clamp(19px,1.45vw,28px);line-height:1;font-weight:800;text-transform:uppercase;white-space:nowrap}
+.sharp-services-title::before,.sharp-services-title::after{content:"";position:absolute;top:50%;width:11%;height:2px;background:#ed1c24;transform:translateY(-50%)}
+.sharp-services-title::before{left:0}.sharp-services-title::after{right:0}
 .sharp-services{position:absolute;z-index:2;left:2.7%;top:51.45%;width:94.6%;height:6.75%;display:grid;grid-template-columns:repeat(6,1fr);background:transparent;color:#062a61;text-align:center}
 .sharp-services article{justify-self:center;width:92%;display:flex;flex-direction:column;align-items:center;padding:.05vw .5vw;background:#fff}
 .sharp-services article:last-child{border-right:0}
@@ -67,9 +69,9 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .process-copy h3{margin:0 0:.38vw;font-size:clamp(12px,.88vw,17px);line-height:1.16;font-weight:800}
 .process-copy p{margin:0;font-size:clamp(12px,.76vw,15px);line-height:1.34;font-weight:500}
 .sharp-why{position:absolute;z-index:3;left:4.7%;top:87.95%;width:43.9%;height:11.85%;overflow:hidden;color:#062a61}
-.sharp-why h2{position:absolute;left:9%;top:0;width:82%;height:14%;margin:0;display:grid;place-items:center;background:#fff;text-align:center;font-size:clamp(17px,1.25vw,24px);line-height:1;font-weight:800;text-transform:uppercase}
-.sharp-why article{position:absolute;width:36.5%;height:38%;padding:.1vw .25vw;background:#fff}
-.sharp-why .why-one{left:12.8%;top:19%}.sharp-why .why-two{left:62.3%;top:19%}.sharp-why .why-three{left:12.8%;top:59%}.sharp-why .why-four{left:62.3%;top:59%}
+.sharp-why h2{position:absolute;left:8%;top:0;width:84%;height:14%;margin:0;display:grid;place-items:center;background:#f8fafc;text-align:center;font-size:clamp(17px,1.25vw,24px);line-height:1;font-weight:800;text-transform:uppercase}
+.sharp-why article{position:absolute;width:38%;height:38%;padding:.1vw .35vw;background:#f8fafc}
+.sharp-why .why-one{left:11.9%;top:19%}.sharp-why .why-two{left:61.2%;top:19%}.sharp-why .why-three{left:11.9%;top:59%}.sharp-why .why-four{left:61.2%;top:59%}
 .sharp-why h3{margin:0 0:.25vw;font-size:clamp(11px,.78vw,15px);line-height:1.15;font-weight:800;white-space:nowrap}
 .sharp-why p{margin:0;font-size:clamp(10px,.67vw,13px);line-height:1.35;font-weight:500}
 .sharp-faq{position:absolute;z-index:4;left:50.1%;top:88.05%;width:45.4%;height:11.7%;padding:0 1.4vw;background:#fff;color:#062a61}
