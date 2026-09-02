@@ -5,6 +5,10 @@
 .healthcare-page .corp-benefits{margin-top:-14px}
 .healthcare-page .corp-hero h1{font-size:clamp(41px,3.15vw,60px)}
 .healthcare-page .corp-actions{flex-wrap:nowrap;gap:10px}
+.healthcare-page .corp-bottom{height:auto;max-height:none;overflow:visible;align-items:stretch}
+.healthcare-page .corp-why,.healthcare-page .corp-faq{height:auto;max-height:none;overflow:visible}
+.healthcare-page .corp-faq details{height:auto;max-height:none;overflow:visible}
+.healthcare-page .corp-faq details[open]>p{position:static;display:block}
 @media(min-width:651px){
   .healthcare-page .corp-actions .corp-button{flex:1 1 0;width:auto;min-width:0;padding-inline:6px;font-size:14px;letter-spacing:-.01em}
 }
