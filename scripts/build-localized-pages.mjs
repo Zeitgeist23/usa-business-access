@@ -49,7 +49,14 @@ const output = {
 
 function absolute(url){ return `https://www.usabusinessaccess.com${url === "/" ? "/" : url}`; }
 function mediaFor(key){ return key === "llc" ? "/llc-original-hero-wide.webp" : key === "buy" ? "/c-corporation-governance-teal.webp" : key === "banking" ? "/llc-corporate-records-hero.webp" : "/foreign-owned-us-llc-routes-hero.webp"; }
-function linkFor(type, l){ if(type === "phone") return "tel:+13125153372"; if(type === "email") return "mailto:contact@usabusinessaccess.com?subject=USA%20Business%20Access%20Inquiry"; return l[type]; }
+function linkFor(type, l){
+  if(type === "phone") return "tel:+13125153372";
+  if(type === "email") {
+    const subject=l.code === "ES" ? "Consulta%20de%20USA%20Business%20Access" : l.code === "PT" ? "Consulta%20USA%20Business%20Access" : "USA%20Business%20Access%20Inquiry";
+    return `mailto:contact@usabusinessaccess.com?subject=${subject}`;
+  }
+  return l[type];
+}
 
 function render(lang, key){
   const l=languages[lang], p=pages[key][lang];
