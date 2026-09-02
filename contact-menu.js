@@ -135,6 +135,9 @@
   function closeMenu(restoreFocus) {
     if (!activeTrigger) return;
     menu.classList.remove("is-open");
+    menu.style.opacity = "0";
+    menu.style.visibility = "hidden";
+    menu.style.transform = "translateY(-8px)";
     menu.setAttribute("aria-hidden", "true");
     triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
     const triggerToFocus = activeTrigger;
@@ -145,6 +148,9 @@
   function openMenu(trigger) {
     activeTrigger = trigger;
     menu.classList.add("is-open");
+    menu.style.opacity = "1";
+    menu.style.visibility = "visible";
+    menu.style.transform = "translateY(0)";
     positionMenu(trigger);
     menu.setAttribute("aria-hidden", "false");
     triggers.forEach((item) => item.setAttribute("aria-expanded", String(item === trigger)));
