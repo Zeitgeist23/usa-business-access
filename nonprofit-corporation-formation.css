@@ -84,3 +84,10 @@
 .nonprofit-audience-icon svg{width:118px;height:118px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 .nonprofit-audiences .corp-founder-card h2{font-size:27px}
 @media(max-width:650px){.nonprofit-audiences .corp-founder-card{grid-template-columns:1fr}.nonprofit-audience-icon{height:120px}}
+
+
+/* Nonprofit masthead image framing */
+.corp-hero-media{background:#fff}
+.corp-hero-media::before{display:none}
+.corp-hero-media img{object-fit:contain;object-position:center center;background:#fff}
+.corp-benefits{margin-top:-14px}
