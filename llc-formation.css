@@ -54,7 +54,7 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .founder-card:hover,.founder-card:focus-within{transform:translateY(-4px);background:#eef3f8;box-shadow:0 10px 22px rgba(6,42,97,.16)}
 .us-founder-card{left:4.7%;width:43.5%}.international-founder-card{left:49.6%;width:46.1%}
 .spinning-globe{justify-self:center;align-self:center;width:88%;height:auto;object-fit:contain;transform:translateY(-10%)}
-.international-founder-card .spinning-globe{width:100%;transform:translateY(-10%)}
+.international-founder-card .spinning-globe{width:112%;transform:translateY(4%)}
 .founder-card>div{align-self:center;transform:translateY(-5%)}
 .founder-card h2{margin:0 0:.35vw;font-size:clamp(16px,1.3vw,25px);line-height:1.08;font-weight:800}
 .founder-card p{margin:0 0:.38vw;font-size:clamp(11px,.8vw,15px);line-height:1.2}
