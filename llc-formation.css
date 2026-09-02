@@ -52,7 +52,8 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 .founder-card{position:absolute;z-index:3;top:60.1%;height:11.35%;display:grid;grid-template-columns:25% 1fr;align-items:center;padding:.55vw 1.1vw .55vw .65vw;border:1px solid #d9e1ec;border-radius:10px;background:#f2f5f9;color:#092e69;box-shadow:0 2px 7px rgba(6,42,97,.07);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
 .founder-card:hover,.founder-card:focus-within{transform:translateY(-4px);background:#eef3f8;box-shadow:0 10px 22px rgba(6,42,97,.16)}
 .us-founder-card{left:4.7%;width:43.5%}.international-founder-card{left:49.6%;width:46.1%}
-.spinning-globe{justify-self:center;width:88%;height:auto;clip-path:circle(47% at 50% 50%)}
+.spinning-globe{justify-self:center;align-self:center;width:88%;height:auto;object-fit:contain;transform:translateY(-10%)}
+.founder-card>div{align-self:center;transform:translateY(-5%)}
 .founder-card h2{margin:0 0:.35vw;font-size:clamp(16px,1.3vw,25px);line-height:1.08;font-weight:800}
 .founder-card p{margin:0 0:.38vw;font-size:clamp(11px,.8vw,15px);line-height:1.2}
 .founder-card ul{margin:0;padding:0;list-style:none}
