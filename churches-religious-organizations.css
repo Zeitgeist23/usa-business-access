@@ -4,19 +4,17 @@
 .church-page .corp-hero-media img{object-fit:cover;object-position:center center;transform:none;background:#fff}
 .church-page .corp-benefits{margin-top:-14px}
 .church-page .corp-hero h1{font-size:clamp(41px,3.15vw,60px)}
-.church-page .corp-actions{flex-wrap:wrap}
-.church-page .corp-actions .corp-button.primary{width:300px;font-size:16px}
+.church-page .corp-actions{flex-wrap:nowrap;gap:10px}
+.church-page .corp-actions .corp-button{flex:1 1 0;width:auto;min-width:0;padding-inline:6px;font-size:14px;letter-spacing:-.01em}
 .church-audiences .corp-founder-card{grid-template-columns:180px 1fr}
 @media(min-width:1051px) and (max-width:1320px){
   .church-page .corp-hero{grid-template-columns:52% 48%}
   .church-page .corp-hero-copy{padding-right:2.5vw}
-  .church-page .corp-actions{gap:14px}
-  .church-page .corp-actions .corp-button.primary{width:280px;font-size:15px}
-  .church-page .corp-actions .corp-button.secondary{width:270px;font-size:15px}
   .church-page .corp-hero-media .corp-hero-second{object-position:64% center}
 }
 @media(max-width:650px){
   .church-audiences .corp-founder-card{grid-template-columns:1fr}
   .church-page .corp-hero h1{font-size:40px}
-  .church-page .corp-actions .corp-button.primary{width:100%}
+  .church-page .corp-actions{flex-wrap:wrap}
+  .church-page .corp-actions .corp-button{flex:none;width:100%;font-size:16px;letter-spacing:normal}
 }
