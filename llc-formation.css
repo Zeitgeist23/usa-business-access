@@ -211,3 +211,13 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
   .sharp-faq details[open]{z-index:6}
   .sharp-faq details[open] summary{border-bottom:1px solid #e3e7ee}
 }
+
+/* Match the readable body-copy scale used across corporate formation pages. */
+@media(min-width:1051px){
+  .sharp-services p{font-size:16px;line-height:1.4}
+  .founder-card p{font-size:17px;line-height:1.35}
+  .founder-card li{font-size:16px;line-height:1.4}
+  .process-copy h3{font-size:18px;line-height:1.2}
+  .process-copy p{font-size:16px;line-height:1.42}
+  .sharp-why p,.sharp-faq details p{font-size:16px;line-height:1.5}
+}
