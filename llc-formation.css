@@ -215,9 +215,12 @@ body{margin:0;background:#fff;color:var(--navy);font-family:Arial,Helvetica,sans
 /* Match the readable body-copy scale used across corporate formation pages. */
 @media(min-width:1051px){
   .sharp-services p{font-size:16px;line-height:1.4}
-  .founder-card p{font-size:17px;line-height:1.35}
-  .founder-card li{font-size:16px;line-height:1.4}
-  .process-copy h3{font-size:18px;line-height:1.2}
-  .process-copy p{font-size:16px;line-height:1.42}
-  .sharp-why p,.sharp-faq details p{font-size:16px;line-height:1.5}
+  .founder-card{height:11.9%}
+  .founder-card p{font-size:16px;line-height:1.32}
+  .founder-card li{font-size:15px;line-height:1.34}
+  .process-copy h3{font-size:17px;line-height:1.18}
+  .process-copy p{font-size:15px;line-height:1.4}
+  .sharp-why,.sharp-faq{top:89.4%}
+  .sharp-why p,.sharp-faq details p{font-size:15px;line-height:1.5}
+  .approved-body{margin-bottom:calc(clamp(410px,25.5vw,485px) - 11.3vw + 62px + var(--llc-faq-extra,0px))}
 }
