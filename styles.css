@@ -871,8 +871,7 @@ a { color: inherit; }
 
 
 /* HEADER DROPDOWN CHEVRONS */
-.company-menu-toggle::after,
-.services-menu-toggle::after {
+.company-menu-toggle::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -886,7 +885,6 @@ a { color: inherit; }
   transform-origin: 55% 55%;
   transition: transform .16s ease;
 }
-.company-menu-toggle[aria-expanded="true"]::after,
-.services-menu-toggle[aria-expanded="true"]::after {
+.company-menu-toggle[aria-expanded="true"]::after {
   transform: translateY(-28%) rotate(225deg);
 }
