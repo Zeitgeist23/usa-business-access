@@ -89,14 +89,17 @@ a { color: inherit; }
   top: 24.5%;
   display: grid;
   place-items: center;
+  box-sizing: border-box;
   width: 76.9%;
   height: 62.7%;
-  border-radius: 5px;
-  background: #19bce3;
-  color: #082c67;
+  border: 1px solid #11a9cf;
+  border-radius: 6px;
+  background: #20c4e8;
+  color: #062a61;
   font: 700 1vw/1 "Arial Narrow", Arial, Helvetica, sans-serif;
   opacity: 0;
   pointer-events: none;
+  box-shadow: 0 7px 16px rgb(6 42 97 / 24%);
 }
 .nav-contact:hover::before,
 .nav-contact:focus-visible::before {
