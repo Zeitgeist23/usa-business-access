@@ -9,14 +9,23 @@
 .trust-page .offshore-hero-actions{flex-direction:column;align-items:flex-start;gap:12px}
 .trust-page .offshore-hero-actions .corp-button{flex:none;width:380px;max-width:100%}
 .trust-audiences .corp-founder-card{grid-template-columns:180px 1fr}
+.holding-page .corp-hero,
+.holding-page .corp-hero-media{height:640px}
+.holding-page .corp-benefits{margin-top:24px}
 @media(min-width:1051px) and (max-width:1320px){
   .trust-page .corp-hero{grid-template-columns:52% 48%}
   .trust-page .corp-hero-copy{padding-right:2.5vw}
   .trust-page .corp-hero h1{font-size:clamp(38px,3.05vw,50px)}
+}
+@media(max-width:1050px){
+  .holding-page .corp-hero{height:auto}
+  .holding-page .corp-hero-media{height:460px}
+  .holding-page .corp-benefits{margin-top:24px}
 }
 @media(max-width:650px){
   .trust-audiences .corp-founder-card{grid-template-columns:1fr}
   .trust-page .corp-hero h1{font-size:39px}
   .trust-page .corp-actions{flex-wrap:wrap}
   .trust-page .corp-actions .corp-button{flex:none;width:100%;font-size:16px;letter-spacing:normal}
+  .holding-page .corp-hero-media{height:330px}
 }
