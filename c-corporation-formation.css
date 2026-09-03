@@ -57,6 +57,7 @@
 .corp-step p{margin:0;font-size:15px;line-height:1.45}
 .corp-bottom{display:grid;grid-template-columns:1fr 1fr;gap:28px;width:92%;margin:0 auto 62px}
 .corp-why,.corp-faq{padding:30px;border:1px solid var(--corp-line);border-radius:12px;background:#fff;box-shadow:0 5px 16px rgba(6,42,97,.08)}
+.corp-faq{background:#f1f9fb}
 .corp-bottom h2{margin:0 0 22px;font-size:27px;text-align:center;text-transform:uppercase}
 .corp-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .corp-why h3{margin:0 0 7px;font-size:18px}
