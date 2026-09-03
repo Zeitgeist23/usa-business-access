@@ -4,6 +4,7 @@
   const path = window.location.pathname.replace(/\.html$/, "").replace(/\/$/, "") || "/";
   const routes = {
     "/": { en: "/", es: "/es", pt: "/pt" },
+    "/monthly-bookkeeping": { en: "/monthly-bookkeeping", es: "/es", pt: "/pt" },
     "/llc-formation": { en: "/llc-formation", es: "/es/formacion-llc", pt: "/pt/formacao-llc" },
     "/c-corporation-formation": { en: "/c-corporation-formation", es: "/es/formacion-corporacion-c", pt: "/pt/formacao-corporacao-c" },
     "/s-corporation-election": { en: "/s-corporation-election", es: "/es/eleccion-corporacion-s", pt: "/pt/eleicao-corporacao-s" },

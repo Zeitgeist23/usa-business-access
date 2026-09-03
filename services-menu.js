@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="accounting-menu-links">
-            <a href="#accounting-tax"><span>Monthly & Quarterly Bookkeeping</span><b aria-hidden="true">→</b></a>
+            <a href="/monthly-bookkeeping"><span>Monthly & Quarterly Bookkeeping</span><b aria-hidden="true">→</b></a>
             <a href="#accounting-tax"><span>General Ledger & Reconciliations</span><b aria-hidden="true">→</b></a>
             <a href="#accounting-tax"><span>Accounts Payable & Receivable</span><b aria-hidden="true">→</b></a>
             <a href="#accounting-tax"><span>Payroll Accounting</span><b aria-hidden="true">→</b></a>
