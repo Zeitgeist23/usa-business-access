@@ -76,7 +76,7 @@ a { color: inherit; }
 .nav-banking { left: 52.2%; top: 2.1%; width: 13.9%; height: 7.0%; }
 .nav-growth { left: 66.0%; top: 2.1%; width: 13.2%; height: 7.0%; }
 .nav-services { left: 79.3%; top: 2.1%; width: 8.7%; height: 7.0%; }
-.nav-contact { left: 89.1%; top: 1.4%; width: 8.2%; height: 7.4%; }
+.nav-contact { left: calc(89.1% + 10px); top: 1.4%; width: 8.2%; height: 7.4%; }
 .hero-start { left: 4.1%; top: 47.0%; width: 17.6%; height: 5.7%; }
 .hero-explore { left: 23.1%; top: 47.0%; width: 13.8%; height: 5.7%; }
 
