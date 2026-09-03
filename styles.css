@@ -97,15 +97,10 @@ a { color: inherit; }
   font: 700 1vw/1 "Arial Narrow", Arial, Helvetica, sans-serif;
   opacity: 0;
   pointer-events: none;
-  box-shadow: 0 6px 15px rgb(8 44 103 / 24%);
-  transform: translateY(0);
-  transition: opacity .16s ease, transform .16s ease, box-shadow .16s ease;
 }
 .nav-contact:hover::before,
 .nav-contact:focus-visible::before {
   opacity: 1;
-  transform: translateY(-2px);
-  box-shadow: 0 9px 20px rgb(8 44 103 / 30%);
 }
 .nav-contact:focus-visible { background: transparent; }
 .hero-start { left: 4.1%; top: 47.0%; width: 17.6%; height: 5.7%; }
