@@ -38,7 +38,7 @@
     .usaba-language-list a { display:block; padding:10px 12px; border-radius:7px; color:#082c67; font-size:14px; font-weight:700; text-decoration:none; }
     .usaba-language-list a:hover,.usaba-language-list a:focus-visible { background:#e9faff; color:#047da4; outline:none; }
     .usaba-language-list a[aria-current="page"] { background:#082c67; color:#fff; }
-    .image-hotspots .usaba-language { position:absolute; left:auto; right:calc(10.75% - 12px); top:3.2%; z-index:30; }
+    .image-hotspots .usaba-language { position:absolute; left:auto; right:calc(10.75% - 20px); top:3.2%; z-index:30; }
     .image-hotspots .usaba-language-button { box-sizing:border-box; width:52px; min-width:52px; max-width:52px; min-height:0; height:44px; max-height:44px; gap:2px; padding:0 2px; border-radius:7px; background:rgba(255,255,255,.96); }
     @media(max-width:980px){ .site-header .usaba-language-button{padding:0 9px}.site-header .usaba-language-button .language-word{display:none} }
     @media(max-width:733px){ .image-hotspots .usaba-language{position:fixed;left:auto;right:16px;top:16px}.image-hotspots .usaba-language-button{height:44px;max-height:none;padding:0 12px;border-radius:7px} }
