@@ -40,46 +40,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/501c3-tax-exempt-application</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/charitable-foundation-structures</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/churches-religious-organizations</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/animal-rescue-welfare-nonprofits</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/healthcare-rehabilitation-nonprofits</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/us-domestic-trusts</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/revocable-living-trusts</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/irrevocable-trusts</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/irrevocable-life-insurance-trusts</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/business-investment-trust-structures</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
+  <url><loc>https://www.usabusinessaccess.com/501c3-tax-exempt-application</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/charitable-foundation-structures</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/churches-religious-organizations</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/animal-rescue-welfare-nonprofits</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/healthcare-rehabilitation-nonprofits</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/us-domestic-trusts</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/revocable-living-trusts</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/irrevocable-trusts</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/irrevocable-life-insurance-trusts</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/business-investment-trust-structures</loc><lastmod>2026-09-02</lastmod></url>
   <url><loc>https://www.usabusinessaccess.com/banking-compliance</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.usabusinessaccess.com/buy-us-business</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
   <url><loc>https://www.usabusinessaccess.com/contact</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
@@ -103,44 +73,15 @@
   <url><loc>https://www.usabusinessaccess.com/pt/servicos-bancarios-conformidade</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.usabusinessaccess.com/pt/comprar-empresa-nos-estados-unidos</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.usabusinessaccess.com/pt/contato</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/offshore-llcs</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/offshore-corporations</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/offshore-trusts</loc>
-    <lastmod>2026-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/international-holding-companies</loc>
-    <lastmod>2026-09-03</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/us-foreign-multi-entity-structures</loc>
-    <lastmod>2026-09-03</lastmod>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/general-ledger-reconciliations</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/monthly-bookkeeping</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/es/contabilidad-mensual</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.usabusinessaccess.com/pt/contabilidade-mensal</loc>
-    <lastmod>2026-09-03</lastmod>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://www.usabusinessaccess.com/offshore-llcs</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/offshore-corporations</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/offshore-trusts</loc><lastmod>2026-09-02</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/international-holding-companies</loc><lastmod>2026-09-03</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/us-foreign-multi-entity-structures</loc><lastmod>2026-09-03</lastmod></url>
+  <url><loc>https://www.usabusinessaccess.com/general-ledger-reconciliations</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.usabusinessaccess.com/es/libro-mayor-conciliaciones</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.usabusinessaccess.com/pt/razao-geral-conciliacoes</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.usabusinessaccess.com/monthly-bookkeeping</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.usabusinessaccess.com/es/contabilidad-mensual</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.usabusinessaccess.com/pt/contabilidade-mensal</loc><lastmod>2026-09-03</lastmod><priority>0.9</priority></url>
 </urlset>
