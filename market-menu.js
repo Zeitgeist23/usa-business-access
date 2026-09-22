@@ -23,18 +23,18 @@
             <span class="market-menu-icon" aria-hidden="true"><svg><use href="#icon-card"></use></svg></span>
             <div>
               <span class="market-menu-kicker">Buy across borders</span>
-              <h2 id="market-acquisition-heading">Business Acquisition & Brokerage</h2>
+              <h2 id="market-acquisition-heading">Business Listings & Acquisition</h2>
             </div>
           </div>
           <div class="market-menu-links">
-            <a href="#buy-us-business"><span>Buy a U.S. Business</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>U.S. Businesses by Industry</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>U.S. Businesses by State</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>International Business Acquisition</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>Business Search / Buyer Representation</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>Business Broker Introductions</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>Business Valuations</span><b aria-hidden="true">→</b></a>
-            <a href="#buy-us-business"><span>Acquisition Due Diligence Coordination</span><b aria-hidden="true">→</b></a>
+            <a href="/businesses-for-sale"><span>Browse Businesses for Sale</span><b aria-hidden="true">→</b></a>
+            <a href="/businesses-for-sale#florida-hospitality"><span>Florida Hospitality Businesses</span><b aria-hidden="true">→</b></a>
+            <a href="/buy-us-business"><span>Buy a U.S. Business</span><b aria-hidden="true">→</b></a>
+            <a href="/buy-us-business#international-buyers"><span>International Business Buyers</span><b aria-hidden="true">→</b></a>
+            <a href="/buy-us-business#acquisition-services"><span>Acquisition Services</span><b aria-hidden="true">→</b></a>
+            <a href="/businesses-for-sale#broker-network"><span>Business Broker Network</span><b aria-hidden="true">→</b></a>
+            <a href="/businesses-for-sale#broker-network"><span>List a Business</span><b aria-hidden="true">→</b></a>
+            <a href="/buy-us-business#buyer-search"><span>Buyer Search Request</span><b aria-hidden="true">→</b></a>
           </div>
         </section>
 
