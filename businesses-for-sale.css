@@ -1,0 +1,346 @@
+:root {
+  --market-navy: #03223a;
+  --market-deep: #001a2d;
+  --market-cyan: #0789af;
+  --market-red: #d7333f;
+  --market-line: #c6dde4;
+}
+
+.localized-nav>a[aria-current="page"] {
+  color: var(--market-cyan);
+}
+
+.inventory-hero {
+  padding: 92px clamp(22px, 8vw, 145px) 84px;
+  color: #fff;
+  background: linear-gradient(115deg, rgba(0, 26, 45, .98), rgba(3, 67, 92, .94));
+}
+
+.inventory-hero h1 {
+  max-width: 900px;
+  margin: 8px 0 18px;
+  font: 700 clamp(46px, 6vw, 76px)/1.02 Georgia, serif;
+}
+
+.inventory-hero>p:not(.inventory-kicker) {
+  max-width: 810px;
+  margin: 0 0 30px;
+  color: #d8eaf0;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.inventory-kicker {
+  margin: 0;
+  color: #3bd2f3;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.inventory-main {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 78px 28px 90px;
+}
+
+.inventory-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.inventory-heading h2,
+.broker-network h2 {
+  margin: 8px 0 0;
+  color: var(--market-navy);
+  font: 700 clamp(34px, 4vw, 50px)/1.08 Georgia, serif;
+}
+
+#result-count {
+  color: #496a78;
+  font-weight: 800;
+}
+
+.inventory-filters {
+  display: grid;
+  margin: 34px 0 28px;
+  padding: 22px;
+  grid-template-columns: 1.4fr repeat(3, 1fr) auto;
+  gap: 14px;
+  border: 1px solid var(--market-line);
+  border-radius: 16px;
+  background: #f3f9fb;
+}
+
+.inventory-filters label {
+  color: #365664;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.inventory-filters input,
+.inventory-filters select,
+.inventory-filters button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 7px;
+  padding: 0 13px;
+  border: 1px solid #a9cbd5;
+  border-radius: 8px;
+  color: var(--market-navy);
+  background: #fff;
+  font: 700 15px Arial, sans-serif;
+}
+
+.inventory-filters button {
+  align-self: end;
+  width: auto;
+  margin-top: 0;
+  padding: 0 21px;
+  border-color: var(--market-navy);
+  color: #fff;
+  background: var(--market-navy);
+  cursor: pointer;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.inventory-card {
+  display: flex;
+  min-height: 520px;
+  padding: 28px;
+  flex-direction: column;
+  border: 1px solid #0d7fa0;
+  border-radius: 18px;
+  color: #e8f4f7;
+  background: linear-gradient(145deg, #032940, #021b2e);
+  box-shadow: 0 20px 42px rgba(0, 35, 55, .13);
+}
+
+.inventory-card[hidden] {
+  display: none;
+}
+
+.inventory-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.inventory-tag,
+.inventory-license {
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.inventory-tag {
+  color: #fff;
+  background: var(--market-cyan);
+}
+
+.inventory-license {
+  border: 1px solid #4bbbd5;
+  color: #7ce2f8;
+}
+
+.inventory-location {
+  margin: 0 0 7px;
+  color: #65daf4;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.inventory-card h3 {
+  margin: 0;
+  color: #fff;
+  font: 700 30px/1.13 Georgia, serif;
+}
+
+.inventory-summary {
+  margin: 15px 0 22px;
+  color: #bdd1d9;
+  line-height: 1.55;
+}
+
+.inventory-card dl {
+  display: grid;
+  margin: 0 0 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.inventory-card dl div {
+  padding: 15px;
+  border: 1px solid rgba(101, 218, 244, .35);
+  border-radius: 10px;
+  background: rgba(0, 12, 24, .32);
+}
+
+.inventory-card dt {
+  color: #95bdca;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.inventory-card dd {
+  margin: 7px 0 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.inventory-broker {
+  margin: auto 0 19px;
+  color: #b7d1da;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.inventory-broker strong {
+  color: #fff;
+}
+
+.inventory-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 54px;
+  padding: 0 18px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--market-red);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .03em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inventory-button:hover {
+  background: #b82431;
+}
+
+.inventory-empty {
+  padding: 55px 24px;
+  border: 1px dashed #87b5c3;
+  border-radius: 14px;
+  text-align: center;
+  background: #f3f9fb;
+}
+
+.inventory-empty h3 {
+  margin: 0 0 8px;
+  color: var(--market-navy);
+  font: 700 26px Georgia, serif;
+}
+
+.inventory-disclaimer {
+  margin: 24px 0 0;
+  color: #657c86;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.broker-network {
+  display: grid;
+  align-items: center;
+  padding: 70px clamp(22px, 8vw, 145px);
+  grid-template-columns: 1.3fr .7fr;
+  gap: 50px;
+  border-top: 1px solid var(--market-line);
+  background: #edf7fa;
+}
+
+.broker-network>div>p:not(.inventory-kicker) {
+  max-width: 760px;
+  color: #3d5e6a;
+  line-height: 1.6;
+}
+
+.broker-actions {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.broker-actions .localized-button {
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .inventory-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inventory-grid,
+  .broker-network {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .inventory-hero {
+    padding: 58px 22px;
+  }
+
+  .inventory-hero h1 {
+    font-size: 42px;
+  }
+
+  .inventory-main {
+    padding: 54px 18px 65px;
+  }
+
+  .inventory-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inventory-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-filters button {
+    width: 100%;
+  }
+
+  .inventory-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .inventory-card h3 {
+    font-size: 25px;
+  }
+
+  .inventory-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .broker-network {
+    padding: 54px 22px;
+  }
+}
