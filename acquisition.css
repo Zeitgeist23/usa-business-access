@@ -1,0 +1,144 @@
+.localized-nav>a[aria-current="page"] {
+  color: #0789af;
+}
+
+.acquisition-preview {
+  margin-bottom: 70px;
+  padding-bottom: 65px;
+  border-bottom: 1px solid var(--line);
+}
+
+.acquisition-preview .localized-section-heading {
+  margin-bottom: 28px;
+}
+
+.acquisition-preview .localized-section-heading .localized-kicker {
+  margin: 0 0 8px;
+  color: #0789af;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.acquisition-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.acquisition-preview-card {
+  display: flex;
+  min-height: 420px;
+  padding: 30px;
+  flex-direction: column;
+  border: 1px solid #c6dde4;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff, #f2f9fb);
+  box-shadow: 0 16px 38px rgba(0, 31, 49, .08);
+}
+
+.acquisition-preview-card h3 {
+  margin: 6px 0 12px;
+  color: #00263d;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  line-height: 1.12;
+}
+
+.acquisition-preview-card p {
+  line-height: 1.55;
+}
+
+.acquisition-location {
+  margin: 0;
+  color: #0789af;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.acquisition-preview-card dl {
+  display: grid;
+  margin: 23px 0 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.acquisition-preview-card dl div {
+  padding: 14px;
+  border: 1px solid #c8dfe6;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.acquisition-preview-card dt {
+  color: #52717e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.acquisition-preview-card dd {
+  margin: 5px 0 0;
+  color: #00263d;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.acquisition-broker {
+  margin: auto 0 20px;
+  color: #526c77;
+  font-size: 13px;
+}
+
+.acquisition-preview-card .localized-button {
+  align-self: flex-start;
+}
+
+.acquisition-preview-actions {
+  display: flex;
+  margin-top: 26px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 820px) {
+  .acquisition-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acquisition-preview-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .acquisition-preview {
+    margin-bottom: 48px;
+    padding-bottom: 44px;
+  }
+
+  .acquisition-preview-card {
+    padding: 22px;
+  }
+
+  .acquisition-preview-card h3 {
+    font-size: 23px;
+  }
+
+  .acquisition-preview-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .acquisition-preview-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .acquisition-preview-actions .localized-button {
+    text-align: center;
+  }
+}
